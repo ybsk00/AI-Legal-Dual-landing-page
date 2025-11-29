@@ -304,8 +304,8 @@ export default function Home() {
       <section className="py-16 md:py-20 bg-gradient-to-b from-muted/30 to-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">AI 마케팅 상담소</h2>
-            <p className="text-lg text-muted-foreground">궁금한 점이 있으신가요? AI에게 바로 물어보세요</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">24시간 마케팅 상담</h2>
+            <p className="text-lg text-muted-foreground">혁신적인 병원마케팅 방법에 대해서 궁금하신 점이 있으신가요? 무엇이든지 물어보세요</p>
           </div>
           <GeminiChat />
         </div>

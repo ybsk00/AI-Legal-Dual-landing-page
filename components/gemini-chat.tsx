@@ -121,8 +121,8 @@ export function GeminiChat() {
               <Sparkles className="w-6 h-6 text-primary" />
             </div>
             <div>
-              <CardTitle>AI 마케팅 상담소</CardTitle>
-              <CardDescription>Gemini 2.0이 24시간 실시간으로 답변해드립니다.</CardDescription>
+              <CardTitle>24시간 마케팅 상담</CardTitle>
+              <CardDescription>혁신적인 병원마케팅 방법에 대해서 궁금하신 점이 있으신가요? 무엇이든지 물어보세요</CardDescription>
             </div>
           </div>
         </CardHeader>
