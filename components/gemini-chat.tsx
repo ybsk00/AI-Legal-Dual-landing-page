@@ -25,7 +25,7 @@ export function GeminiChat() {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "model",
-      content: "안녕하세요! 병원 마케팅과 관련하여 궁금한 점이 있으신가요? 무엇이든 물어보세요.",
+      content: "안녕하세요! 법률 마케팅과 관련하여 궁금한 점이 있으신가요? 무엇이든 물어보세요.",
     },
   ])
   const [input, setInput] = useState("")
@@ -122,7 +122,7 @@ export function GeminiChat() {
             </div>
             <div>
               <CardTitle>24시간 마케팅 상담</CardTitle>
-              <CardDescription>혁신적인 병원마케팅 방법에 대해서 궁금하신 점이 있으신가요? 무엇이든지 물어보세요</CardDescription>
+              <CardDescription>혁신적인 법률 마케팅 방법에 대해서 궁금하신 점이 있으신가요? 무엇이든지 물어보세요</CardDescription>
             </div>
           </div>
         </CardHeader>

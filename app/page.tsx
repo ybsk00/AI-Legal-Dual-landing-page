@@ -45,210 +45,251 @@ export default function Home() {
           <div className="text-center max-w-4xl mx-auto space-y-6">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
               <Zap className="w-4 h-4" />
-              <span>병원 마케팅 혁신 솔루션</span>
+              <span>법률 마케팅 혁신 솔루션</span>
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-balance leading-tight">
-              LLM 기반 이중퍼널로
+              AI 법률 이중퍼널 시스템
               <br />
-              병원 마케팅 혁신
+              왜 기존 광고보다 압도적으로 유리한가?
             </h1>
 
             <p className="text-xl md:text-2xl text-muted-foreground text-balance">
-              홈페이지를 대체하는 AI 마케팅·유입 시스템
+              기존 법률 마케팅의 한계를 넘어서는 새로운 패러다임
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 md:gap-6 pt-4">
               <div className="flex items-center gap-2 px-4 py-2 bg-card rounded-lg border">
                 <Lock className="w-5 h-5 text-primary" />
-                <span className="font-semibold">의료법 100% 준수</span>
+                <span className="font-semibold">변호사법 100% 준수</span>
               </div>
               <div className="flex items-center gap-2 px-4 py-2 bg-card rounded-lg border">
                 <TrendingUp className="w-5 h-5 text-accent" />
-                <span className="font-semibold">매출 2배↑</span>
+                <span className="font-semibold">전환율 3~10배↑</span>
               </div>
               <div className="flex items-center gap-2 px-4 py-2 bg-card rounded-lg border">
                 <Target className="w-5 h-5 text-primary" />
-                <span className="font-semibold">환자 유입 자동화</span>
+                <span className="font-semibold">상담 준비 자동화</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Blog Quality Crisis Section */}
-      <section className="py-32 md:py-40 bg-gradient-to-b from-slate-50 to-white">
+      {/* Problem Section */}
+      <section className="py-24 md:py-32 bg-gradient-to-b from-slate-50 to-white">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
-            {/* Hero Content */}
-            <div className="grid lg:grid-cols-2 gap-12 items-center mb-32">
-              {/* Left: Image */}
-              <div className="order-2 lg:order-1">
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                  <img
-                    src="/images/image.png"
-                    alt="의료진이 태블릿으로 블로그 저품질 이슈를 확인하는 모습"
-                    className="w-full h-auto"
-                    width={600}
-                    height={500}
-                  />
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                기존 법률 마케팅의 문제
+                <br />
+                <span className="text-muted-foreground text-2xl md:text-3xl">(의료 마케팅과 동일한 구조적 한계)</span>
+              </h2>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8 mb-24">
+              <div className="bg-white p-8 rounded-2xl shadow-lg border border-slate-100">
+                <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-6">
+                  <AlertCircle className="w-6 h-6 text-red-600" />
                 </div>
+                <h3 className="text-xl font-bold mb-4">1. 블로그/검색광고의 한계</h3>
+                <ul className="space-y-3 text-slate-600">
+                  <li>• 검색량은 많지만 실질적 자문 불가능</li>
+                  <li>• 상담 전 정보 부족으로 낮은 전환율</li>
+                  <li>• 치열한 경쟁으로 클릭 단가만 상승</li>
+                </ul>
               </div>
 
-              {/* Right: Title & Description */}
-              <div className="order-1 lg:order-2 space-y-6">
-                <h2 className="text-4xl md:text-5xl font-bold leading-tight text-balance">
-                  병원 블로그 마케팅,
-                  <br />
-                  <span className="text-red-600">'저품질 나락'</span>에 빠지셨나요?
-                </h2>
-                <p className="text-lg text-slate-600 leading-relaxed">
-                  의료법 때문에 강력한 카피를 사용하지 못하고, 블로그는 저품질의 늪에 빠져 효과를 보지 못하는 악순환을
-                  끊어낼 새로운 해법을 제시합니다.
-                </p>
+              <div className="bg-white p-8 rounded-2xl shadow-lg border border-slate-100">
+                <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-6">
+                  <Lock className="w-6 h-6 text-orange-600" />
+                </div>
+                <h3 className="text-xl font-bold mb-4">2. 광고 규제 문제</h3>
+                <ul className="space-y-3 text-slate-600">
+                  <li>• "승소율", "최고" 등 표현 금지</li>
+                  <li>• 화려한 카피 불가로 광고 효율 한계</li>
+                  <li>• 변호사 직접 추천·선정 금지</li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-8 rounded-2xl shadow-lg border border-slate-100">
+                <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mb-6">
+                  <Clock className="w-6 h-6 text-yellow-600" />
+                </div>
+                <h3 className="text-xl font-bold mb-4">3. 상담 전 소모적 비용</h3>
+                <ul className="space-y-3 text-slate-600">
+                  <li>• 의뢰인의 낮은 사건 설명 능력</li>
+                  <li>• 사실관계 파악에 상담 시간 70% 소모</li>
+                  <li>• 단순 문의 폭증으로 응대 피로도 증가</li>
+                </ul>
               </div>
             </div>
 
-            {/* AI Dual Funnel Section */}
+            {/* Solution Section - AI Dual Funnel */}
             <div className="mb-24 text-center">
-              <h3 className="text-3xl md:text-4xl font-bold mb-4">AI 2중 퍼널: 광고와 의료 정보의 완벽한 분리</h3>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">왜 "AI 이중 퍼널 시스템"이 정답인가?</h2>
               <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-                우리의 독자적인 2중 퍼널은 '광고 영역'과 '의료 영역'을 명확히 분리하여 의료법 규제를 준수하면서도
-                효과적으로 잠재 환자를 유입시키고 검증합니다.
+                기존 법률 마케팅의 문제를 완전히 해결하는 새로운 패러다임입니다.
               </p>
             </div>
 
-            {/* Two Funnel Cards */}
             <div className="grid md:grid-cols-2 gap-8 mb-32">
-              {/* Card 1: 광고 영역 */}
-              <div className="bg-white rounded-2xl p-8 shadow-lg border-2 border-blue-100">
+              {/* L1 Funnel */}
+              <div className="bg-white rounded-2xl p-8 shadow-lg border-2 border-primary/10">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                    <Megaphone className="w-6 h-6 text-blue-600" />
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                    <Megaphone className="w-6 h-6 text-primary" />
                   </div>
-                  <h4 className="text-2xl font-bold">1단계: 광고 영역 (넓은 타겟)</h4>
+                  <h4 className="text-2xl font-bold">라이트 퍼널 (L1)</h4>
                 </div>
-                <p className="text-slate-600 mb-6">
-                  의료법에 저촉되지 않는 일반적인 건강, 라이프스타일 정보성 콘텐츠로 광범위한 잠재 고객 트래픽을
-                  확보합니다. 이 단계에서는 민감한 의료 정보를 전혀 다루지 않습니다.
-                </p>
-                <div className="relative h-64 flex items-center justify-center bg-gradient-to-b from-cyan-500/20 to-cyan-500/5 rounded-xl">
-                  <img
-                    src="/abstract-teal-cyan-funnel-diagram-wide-top-narrow-.jpg"
-                    alt="광고 영역 퍼널"
-                    className="w-full h-full object-contain"
-                    width={250}
-                    height={250}
-                  />
+                <p className="text-slate-600 mb-4 font-medium">익명·무자격 영역에서 최대 가치 제공</p>
+                <ul className="space-y-3 text-slate-600 mb-6">
+                  <li className="flex items-start gap-2">
+                    <Zap className="w-5 h-5 text-yellow-500 shrink-0 mt-0.5" />
+                    <span>AI 사건 유형 자동 분류 (회생, 형사, 이혼 등)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Zap className="w-5 h-5 text-yellow-500 shrink-0 mt-0.5" />
+                    <span>필요한 자료 및 기본 체크리스트 제공</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <ShieldCheck className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
+                    <span>판단, 승소, 전략 미제공 (규제 완전 준수)</span>
+                  </li>
+                </ul>
+                <div className="p-4 bg-slate-50 rounded-xl text-sm text-slate-500">
+                  👉 기존 블로그·검색 광고가 절대 해줄 수 없는 사용자 문제 인식 단계의 도우미 역할 수행
                 </div>
               </div>
 
-              {/* Card 2: 의료 영역 */}
-              <div className="bg-white rounded-2xl p-8 shadow-lg border-2 border-blue-100">
+              {/* L2 Funnel */}
+              <div className="bg-white rounded-2xl p-8 shadow-lg border-2 border-primary/10">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                    <ShieldCheck className="w-6 h-6 text-blue-600" />
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                    <ShieldCheck className="w-6 h-6 text-primary" />
                   </div>
-                  <h4 className="text-2xl font-bold">2단계: 의료 영역 (정보 제공)</h4>
+                  <h4 className="text-2xl font-bold">전문 퍼널 (L2)</h4>
                 </div>
-                <p className="text-slate-600 mb-6">
-                  명확한 정보 취득 의사를 밝힌 사용자에게만 구체적인 시술, 치료법, 사례 등 전문적인 의료 정보를
-                  제공합니다. 사용자의 자발적 선택을 통해 법적 리스크 없이 검증된 잠재 신환에게 다가갑니다.
-                </p>
-                <div className="relative h-64 flex items-center justify-center bg-gradient-to-b from-blue-500/20 to-blue-500/5 rounded-xl">
-                  <img
-                    src="/abstract-blue-funnel-diagram-narrow-inverted-cone-.jpg"
-                    alt="의료 영역 퍼널"
-                    className="w-full h-full object-contain"
-                    width={250}
-                    height={250}
-                  />
+                <p className="text-slate-600 mb-4 font-medium">로그인 후 전문 분석 + 상담 예약</p>
+                <ul className="space-y-3 text-slate-600 mb-6">
+                  <li className="flex items-start gap-2">
+                    <Zap className="w-5 h-5 text-blue-500 shrink-0 mt-0.5" />
+                    <span>AI가 사실관계를 JSON 구조화하여 정리</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Zap className="w-5 h-5 text-blue-500 shrink-0 mt-0.5" />
+                    <span>"정리된 사건 개요" 및 타임라인 자동 생성</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <ShieldCheck className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
+                    <span>사무실 단일 CRM으로 전달 (변호사법 준수)</span>
+                  </li>
+                </ul>
+                <div className="p-4 bg-slate-50 rounded-xl text-sm text-slate-500">
+                  👉 익명 정보 제공 → 분석 → 예약 → CRM으로 완전 전환되는 구조
                 </div>
               </div>
             </div>
 
-            {/* Bottom CTA Section */}
-            <div className="bg-gradient-to-br from-slate-100 to-slate-50 rounded-2xl p-12 text-center">
-              <h3 className="text-3xl md:text-4xl font-bold mb-4">
-                원장님은 진료에만 집중하세요. 마케팅은 AI가 합니다.
-              </h3>
-              <p className="text-lg text-slate-600 mb-12 max-w-3xl mx-auto">
-                AI가 상담과 분류를 자동으로 처리하고, 진짜 '신환 후보'만 선별하여 전달합니다. 마케팅은 시스템에 맡기고
-                진료 효율을 극대화하세요.
-              </p>
+            {/* Advantages Section */}
+            <div className="bg-gradient-to-br from-slate-100 to-slate-50 rounded-2xl p-12">
+              <div className="text-center mb-12">
+                <h3 className="text-3xl md:text-4xl font-bold mb-4">
+                  이 시스템이 기존 광고 대비 압도적인 이유
+                </h3>
+              </div>
 
-              {/* Feature Grid */}
-              <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-                {/* Feature 1 */}
-                <div className="bg-white rounded-xl p-6 shadow-md text-center">
-                  <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <RepeatIcon className="w-8 h-8 text-emerald-600" />
-                  </div>
-                  <h5 className="text-xl font-bold mb-2">AI 자동 상담 및 분류</h5>
-                  <p className="text-sm text-slate-600">
-                    AI 챗봇이 24시간 문의에 응대하고, 문의 내용을 분석하여 잠재 환자를 자동으로 분류합니다.
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="bg-white p-6 rounded-xl shadow-sm">
+                  <h5 className="text-lg font-bold mb-3 flex items-center gap-2">
+                    <TrendingUp className="w-5 h-5 text-red-500" /> 광고 효율 극대화
+                  </h5>
+                  <p className="text-slate-600 text-sm">
+                    즉시 체류 유도 및 체크리스트 제공으로 기존 랜딩 대비 전환율 3~10배 상승
                   </p>
                 </div>
-
-                {/* Feature 2 */}
-                <div className="bg-white rounded-xl p-6 shadow-md text-center">
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Users className="w-8 h-8 text-blue-600" />
-                  </div>
-                  <h5 className="text-xl font-bold mb-2">신환 후보 자동 선별</h5>
-                  <p className="text-sm text-slate-600">
-                    단순 문의와 실제 치료가 필요한 환자를 AI가 구분하여, 병원에서는 핵심 잠재 고객에게만 집중할 수
-                    있습니다.
+                <div className="bg-white p-6 rounded-xl shadow-sm">
+                  <h5 className="text-lg font-bold mb-3 flex items-center gap-2">
+                    <Target className="w-5 h-5 text-blue-500" /> 상담 준비도 상승
+                  </h5>
+                  <p className="text-slate-600 text-sm">
+                    변호사에게 "정리된 사건" 전달. 불필요한 질문 감소 및 상담 시간 단축
                   </p>
                 </div>
-
-                {/* Feature 3 */}
-                <div className="bg-white rounded-xl p-6 shadow-md text-center">
-                  <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Clock className="w-8 h-8 text-cyan-600" />
-                  </div>
-                  <h5 className="text-xl font-bold mb-2">원장님은 진료에만 집중</h5>
-                  <p className="text-sm text-slate-600">
-                    마케팅과 잠재 환자 필터링에 쏟던 시간을 절약하고, 오직 환자 진료와 치료에만 전념할 수 있는 환경을
-                    만듭니다.
+                <div className="bg-white p-6 rounded-xl shadow-sm">
+                  <h5 className="text-lg font-bold mb-3 flex items-center gap-2">
+                    <Zap className="w-5 h-5 text-yellow-500" /> 업무 효율 증가
+                  </h5>
+                  <p className="text-slate-600 text-sm">
+                    상담 준비 자동화로 하루 상담 처리량 증가 및 사무실 운영 효율 향상
                   </p>
                 </div>
-
-                {/* Feature 4 */}
-                <div className="bg-white rounded-xl p-6 shadow-md text-center">
-                  <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <RepeatIcon className="w-8 h-8 text-purple-600" />
-                  </div>
-                  <h5 className="text-xl font-bold mb-2">자동화된 마케팅 시스템</h5>
-                  <p className="text-sm text-slate-600">
-                    한 번의 설정으로 콘텐츠 생성부터 잠재고객 분류까지, 마케팅 전 과정이 시스템에 의해 자동으로
-                    운영됩니다.
+                <div className="bg-white p-6 rounded-xl shadow-sm">
+                  <h5 className="text-lg font-bold mb-3 flex items-center gap-2">
+                    <ShieldCheck className="w-5 h-5 text-green-500" /> 규제 완전 회피
+                  </h5>
+                  <p className="text-slate-600 text-sm">
+                    자문 금지, 승소율 언급 금지 등 시스템적 차단으로 안심 도입 가능
                   </p>
                 </div>
-
-                {/* Feature 5 */}
-                <div className="bg-white rounded-xl p-6 shadow-md text-center">
-                  <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Lock className="w-8 h-8 text-red-600" />
-                  </div>
-                  <h5 className="text-xl font-bold mb-2">의료법규 완벽 준수</h5>
-                  <p className="text-sm text-slate-600">
-                    시스템 자체가 의료 광고법 가이드라인을 기반으로 설계되어, 법적 문제 발생 가능성을 원천 차단합니다.
-                  </p>
-                </div>
-
-                {/* Feature 6 */}
-                <div className="bg-white rounded-xl p-6 shadow-md text-center">
-                  <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <TrendingUp className="w-8 h-8 text-orange-600" />
-                  </div>
-                  <h5 className="text-xl font-bold mb-2">안정적인 트래픽 증가</h5>
-                  <p className="text-sm text-slate-600">
-                    위험한 표현 없이도 안전하게 블로그 트래픽을 늘리고, 검증된 잠재 환자 유입을 지속적으로 확보합니다.
+                <div className="bg-white p-6 rounded-xl shadow-sm">
+                  <h5 className="text-lg font-bold mb-3 flex items-center gap-2">
+                    <RepeatIcon className="w-5 h-5 text-purple-500" /> 지속 가능한 구조
+                  </h5>
+                  <p className="text-slate-600 text-sm">
+                    비용 증가 없이도 시스템 고도화로 전환율이 자연스럽게 증가하는 구조
                   </p>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Necessity Section */}
+      <section className="py-24 bg-white border-t">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">왜 법률서비스에 반드시 도입해야 하는가?</h2>
+          </div>
+          
+          <div className="space-y-8 max-w-5xl mx-auto">
+             <div className="flex flex-col md:flex-row gap-6 items-start p-6 bg-slate-50 rounded-xl">
+               <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center shrink-0">
+                 <Users className="w-6 h-6 text-blue-600" />
+               </div>
+               <div>
+                 <h4 className="text-xl font-bold mb-2">사건의 90%는 "기초 정보 파악"에서 이탈합니다</h4>
+                 <p className="text-slate-600">
+                   의뢰인은 자신의 문제를 명확히 설명하지 못해 상담 전 이탈합니다. 라이트 AI가 이를 대신 정리해주면 상담 준비도가 폭발적으로 증가합니다.
+                 </p>
+               </div>
+             </div>
+
+             <div className="flex flex-col md:flex-row gap-6 items-start p-6 bg-slate-50 rounded-xl">
+               <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center shrink-0">
+                 <Clock className="w-6 h-6 text-green-600" />
+               </div>
+               <div>
+                 <h4 className="text-xl font-bold mb-2">변호사의 시간과 리소스는 제한적입니다</h4>
+                 <p className="text-slate-600">
+                   초동 상담에 뺏기는 시간을 자동화하여, 변호사님은 사건 판단과 전략 수립이라는 본질적인 업무에 집중할 수 있습니다.
+                 </p>
+               </div>
+             </div>
+
+             <div className="flex flex-col md:flex-row gap-6 items-start p-6 bg-slate-50 rounded-xl">
+               <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center shrink-0">
+                 <TrendingUp className="w-6 h-6 text-purple-600" />
+               </div>
+               <div>
+                 <h4 className="text-xl font-bold mb-2">경쟁 로펌 대비 압도적 디지털 전환</h4>
+                 <p className="text-slate-600">
+                   단순 블로그 경쟁을 넘어, AI 기반 구조화 시스템을 선점함으로써 광고 경쟁력이 6개월~1년 단위로 벌어지게 됩니다.
+                 </p>
+               </div>
+             </div>
           </div>
         </div>
       </section>
@@ -258,14 +299,14 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">병원 매출 이제 고민하지 마세요</h2>
-              <p className="text-lg text-muted-foreground">AI 헬스케어로 시작해서 메디컬 AI로의 전환의 여정</p>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">기존 법률 광고는 끝났습니다</h2>
+              <p className="text-lg text-muted-foreground">AI 이중퍼널 시스템으로 변화하는 법률 시장의 미래</p>
             </div>
 
             <div className="rounded-xl overflow-hidden shadow-2xl bg-white dark:bg-card border">
               <img
-                src="/images/nano-banana.jpeg"
-                alt="AI 헬스케어로 시작해서 메디컬 AI로의 전환의 여정 웹툰"
+                src="/images/legal-marketing-webtoon.jpg"
+                alt="AI 이중퍼널 시스템 웹툰"
                 className="w-full h-auto"
                 width={1920}
                 height={5480}
@@ -305,7 +346,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">24시간 마케팅 상담</h2>
-            <p className="text-lg text-muted-foreground">혁신적인 병원마케팅 방법에 대해서 궁금하신 점이 있으신가요? 무엇이든지 물어보세요</p>
+            <p className="text-lg text-muted-foreground">혁신적인 법률 마케팅 방법에 대해서 궁금하신 점이 있으신가요? 무엇이든지 물어보세요</p>
           </div>
           <GeminiChat />
         </div>
@@ -329,7 +370,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto space-y-6">
             <div className="flex items-start gap-2 text-sm text-muted-foreground bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-800 rounded-lg p-4">
               <AlertCircle className="w-5 h-5 text-amber-600 dark:text-amber-500 shrink-0 mt-0.5" />
-              <p className="leading-relaxed">본 서비스는 의료행위가 아니며, 치료 결정은 의료진 상담이 필수입니다.</p>
+              <p className="leading-relaxed">본 서비스는 법률 자문이 아니며, 구체적인 법률 판단은 변호사 상담이 필수입니다.</p>
             </div>
 
             <div className="text-center space-y-2">

@@ -72,7 +72,7 @@ export function ConsultationForm() {
       if (typeof window !== "undefined" && window.fbq) {
         window.fbq("track", "Lead", {
           content_name: "Consultation Request",
-          content_category: "Hospital Marketing",
+          content_category: "Legal Marketing",
           value: 0,
           currency: "KRW",
         })
