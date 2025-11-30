@@ -45,7 +45,7 @@ export function GeminiChat() {
 
   // Check turn count for modal trigger
   useEffect(() => {
-    if ([3, 5, 8, 10].includes(turnCount)) {
+    if ([3, 5, 7, 10].includes(turnCount)) {
       setShowModal(true)
     }
   }, [turnCount])
