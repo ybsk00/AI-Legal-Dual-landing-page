@@ -48,7 +48,7 @@ export default function Home() {
               <span>법률 마케팅 혁신 솔루션</span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-balance leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-balance leading-snug py-2">
               AI 법률 이중퍼널 시스템
               <br />
               왜 기존 광고보다 압도적으로 유리한가?
@@ -253,43 +253,43 @@ export default function Home() {
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">왜 법률서비스에 반드시 도입해야 하는가?</h2>
           </div>
-          
+
           <div className="space-y-8 max-w-5xl mx-auto">
-             <div className="flex flex-col md:flex-row gap-6 items-start p-6 bg-slate-50 rounded-xl">
-               <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center shrink-0">
-                 <Users className="w-6 h-6 text-blue-600" />
-               </div>
-               <div>
-                 <h4 className="text-xl font-bold mb-2">사건의 90%는 "기초 정보 파악"에서 이탈합니다</h4>
-                 <p className="text-slate-600">
-                   의뢰인은 자신의 문제를 명확히 설명하지 못해 상담 전 이탈합니다. 라이트 AI가 이를 대신 정리해주면 상담 준비도가 폭발적으로 증가합니다.
-                 </p>
-               </div>
-             </div>
+            <div className="flex flex-col md:flex-row gap-6 items-start p-6 bg-slate-50 rounded-xl">
+              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center shrink-0">
+                <Users className="w-6 h-6 text-blue-600" />
+              </div>
+              <div>
+                <h4 className="text-xl font-bold mb-2">사건의 90%는 "기초 정보 파악"에서 이탈합니다</h4>
+                <p className="text-slate-600">
+                  의뢰인은 자신의 문제를 명확히 설명하지 못해 상담 전 이탈합니다. 라이트 AI가 이를 대신 정리해주면 상담 준비도가 폭발적으로 증가합니다.
+                </p>
+              </div>
+            </div>
 
-             <div className="flex flex-col md:flex-row gap-6 items-start p-6 bg-slate-50 rounded-xl">
-               <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center shrink-0">
-                 <Clock className="w-6 h-6 text-green-600" />
-               </div>
-               <div>
-                 <h4 className="text-xl font-bold mb-2">변호사의 시간과 리소스는 제한적입니다</h4>
-                 <p className="text-slate-600">
-                   초동 상담에 뺏기는 시간을 자동화하여, 변호사님은 사건 판단과 전략 수립이라는 본질적인 업무에 집중할 수 있습니다.
-                 </p>
-               </div>
-             </div>
+            <div className="flex flex-col md:flex-row gap-6 items-start p-6 bg-slate-50 rounded-xl">
+              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center shrink-0">
+                <Clock className="w-6 h-6 text-green-600" />
+              </div>
+              <div>
+                <h4 className="text-xl font-bold mb-2">변호사의 시간과 리소스는 제한적입니다</h4>
+                <p className="text-slate-600">
+                  초동 상담에 뺏기는 시간을 자동화하여, 변호사님은 사건 판단과 전략 수립이라는 본질적인 업무에 집중할 수 있습니다.
+                </p>
+              </div>
+            </div>
 
-             <div className="flex flex-col md:flex-row gap-6 items-start p-6 bg-slate-50 rounded-xl">
-               <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center shrink-0">
-                 <TrendingUp className="w-6 h-6 text-purple-600" />
-               </div>
-               <div>
-                 <h4 className="text-xl font-bold mb-2">경쟁 로펌 대비 압도적 디지털 전환</h4>
-                 <p className="text-slate-600">
-                   단순 블로그 경쟁을 넘어, AI 기반 구조화 시스템을 선점함으로써 광고 경쟁력이 6개월~1년 단위로 벌어지게 됩니다.
-                 </p>
-               </div>
-             </div>
+            <div className="flex flex-col md:flex-row gap-6 items-start p-6 bg-slate-50 rounded-xl">
+              <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center shrink-0">
+                <TrendingUp className="w-6 h-6 text-purple-600" />
+              </div>
+              <div>
+                <h4 className="text-xl font-bold mb-2">경쟁 로펌 대비 압도적 디지털 전환</h4>
+                <p className="text-slate-600">
+                  단순 블로그 경쟁을 넘어, AI 기반 구조화 시스템을 선점함으로써 광고 경쟁력이 6개월~1년 단위로 벌어지게 됩니다.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
