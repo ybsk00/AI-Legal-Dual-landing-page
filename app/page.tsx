@@ -51,7 +51,7 @@ export default function Home() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-balance leading-snug py-2">
               AI 법률 이중퍼널 시스템
               <br />
-              왜 기존 광고보다 압도적으로 유리한가?
+              압도적 성과의 비밀
             </h1>
 
             <p className="text-xl md:text-2xl text-muted-foreground text-balance">
