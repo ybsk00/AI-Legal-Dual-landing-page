@@ -305,7 +305,7 @@ export default function Home() {
 
             <div className="rounded-xl overflow-hidden shadow-2xl bg-white dark:bg-card border">
               <img
-                src="/images/legal-marketing-webtoon.jpg"
+                src="/images/legal-marketing-webtoon.png"
                 alt="AI 이중퍼널 시스템 웹툰"
                 className="w-full h-auto"
                 width={1920}
@@ -331,7 +331,7 @@ export default function Home() {
             >
               <iframe
                 className="absolute inset-0 w-full h-full"
-                src="https://www.youtube.com/embed/fnJzdvUiqn4"
+                src="https://www.youtube.com/embed/HPJx65CpVTI"
                 title="LLM 기반 이중퍼널 병원 마케팅 솔루션"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
