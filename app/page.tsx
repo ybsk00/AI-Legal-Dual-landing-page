@@ -57,18 +57,18 @@ export default function Home() {
 
         <div className="container relative z-10 mx-auto px-4 py-20 md:py-32 text-white">
           <div className="text-center max-w-5xl mx-auto space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/20 text-white rounded-full text-sm font-medium backdrop-blur-sm border border-white/20">
-              <Zap className="w-4 h-4" />
+            <div className="inline-flex items-center gap-2 px-6 py-3 bg-primary/20 text-white rounded-full text-lg font-medium backdrop-blur-sm border border-white/20">
+              <Zap className="w-5 h-5" />
               <span>AI 시대 로펌 마케팅 전환</span>
             </div>
 
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-balance leading-tight py-2 drop-shadow-lg">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-balance leading-tight py-2 drop-shadow-lg break-keep">
               사람들은 이제 검색이 아니라
               <br />
               <span className="text-primary-foreground">AI에게 먼저 묻고</span> 변호사를 고릅니다
             </h1>
 
-            <p className="text-xl md:text-2xl text-white/90 text-balance max-w-3xl mx-auto leading-relaxed drop-shadow-md">
+            <p className="text-xl md:text-2xl text-white/90 text-balance max-w-3xl mx-auto leading-relaxed drop-shadow-md break-keep">
               블로그·지식인 중심 마케팅은 끝났습니다.
               <br />
               “AI에게 먼저 물어보는” 이 대화를
@@ -83,38 +83,38 @@ export default function Home() {
               >
                 무료 컨설팅 신청하기
               </button>
-              <p className="text-sm md:text-base font-medium text-white/80 drop-shadow-sm">
+              <p className="text-sm md:text-base font-medium text-white/80 drop-shadow-sm break-keep">
                 AI가 먼저 신뢰를 만들고, 로펌은 정리된 사건만 상담합니다.
               </p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-4 md:gap-6 pt-12 text-left">
               <div className="p-6 bg-black/40 backdrop-blur-md rounded-xl border border-white/10 shadow-sm hover:bg-black/50 transition-colors">
-                <h3 className="font-bold text-lg mb-2 flex items-center gap-2 text-white">
+                <h3 className="font-bold text-lg mb-2 flex items-center gap-2 text-white break-keep">
                   <TrendingUp className="w-5 h-5 text-primary-foreground" />
                   변화된 사용자 행동
                 </h3>
-                <p className="text-white/80 text-sm">
+                <p className="text-white/80 text-sm break-keep">
                   검색 → AI 대화 → 변호사 선택
                   <br />
                   이미 사용자 행동은 이렇게 바뀌었습니다.
                 </p>
               </div>
               <div className="p-6 bg-black/40 backdrop-blur-md rounded-xl border border-white/10 shadow-sm hover:bg-black/50 transition-colors">
-                <h3 className="font-bold text-lg mb-2 flex items-center gap-2 text-white">
+                <h3 className="font-bold text-lg mb-2 flex items-center gap-2 text-white break-keep">
                   <Target className="w-5 h-5 text-primary-foreground" />
                   로펌 전용 AI의 역할
                 </h3>
-                <p className="text-white/80 text-sm">
+                <p className="text-white/80 text-sm break-keep">
                   AI가 의뢰인의 말을 듣고, 정보를 정리하고, 신뢰를 만듭니다. 이 역할을 플랫폼이 아닌 우리 로펌의 AI가 해야 합니다.
                 </p>
               </div>
               <div className="p-6 bg-black/40 backdrop-blur-md rounded-xl border border-white/10 shadow-sm hover:bg-black/50 transition-colors">
-                <h3 className="font-bold text-lg mb-2 flex items-center gap-2 text-white">
+                <h3 className="font-bold text-lg mb-2 flex items-center gap-2 text-white break-keep">
                   <Zap className="w-5 h-5 text-primary-foreground" />
                   AI 법률 2중 퍼널
                 </h3>
-                <p className="text-white/80 text-sm">
+                <p className="text-white/80 text-sm break-keep">
                   익명 상담 AI로 유입을 모으고,
                   <br />
                   로그인 사건정리 AI로 상담·수임까지 자동 연결합니다.
@@ -130,12 +130,12 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 break-keep">
                 블로그·검색광고만으로는
                 <br />
                 이제 고가치 사건이 모이지 않습니다
               </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto break-keep">
                 의뢰인은 글을 읽지 않고, AI에게 자신의 사정을 털어놓습니다.
                 <br />
                 그런데 그 대화의 주인공은 우리 로펌이 아니라 남의 AI입니다.
@@ -182,12 +182,12 @@ export default function Home() {
 
             {/* Solution Section - AI Dual Funnel */}
             <div className="mb-24 text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 break-keep">
                 “검색 → AI 대화 → 변호사 선택”
                 <br />
                 이 흐름을 우리 로펌 퍼널로 바꿉니다
               </h2>
-              <p className="text-lg text-slate-600 max-w-3xl mx-auto font-medium">
+              <p className="text-lg text-slate-600 max-w-3xl mx-auto font-medium break-keep">
                 AI가 먼저 듣고 정리하고 넘겨주는, 로펌 전용 2단계 퍼널입니다.
               </p>
             </div>
@@ -247,7 +247,7 @@ export default function Home() {
             {/* Advantages Section */}
             <div className="bg-gradient-to-br from-slate-100 to-slate-50 rounded-2xl p-12">
               <div className="text-center mb-12">
-                <h3 className="text-3xl md:text-4xl font-bold mb-4">
+                <h3 className="text-3xl md:text-4xl font-bold mb-4 break-keep">
                   AI가 신뢰를 만들고,
                   <br />
                   변호사는 정리된 사건만 보면 됩니다
@@ -289,12 +289,12 @@ export default function Home() {
       <section className="py-24 bg-white border-t">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 break-keep">
               “AI와 먼저 대화한 의뢰인”을
               <br />
               잡는 로펌과 놓치는 로펌
             </h2>
-            <div className="space-y-4 text-xl text-slate-600">
+            <div className="space-y-4 text-xl text-slate-600 break-keep">
               <p>
                 이미 의뢰인의 머릿속 흐름은
                 <br />
