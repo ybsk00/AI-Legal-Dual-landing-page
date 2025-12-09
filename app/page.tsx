@@ -40,36 +40,85 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary/5 via-accent/5 to-background border-b">
-        <div className="container mx-auto px-4 py-16 md:py-24">
-          <div className="text-center max-w-4xl mx-auto space-y-6">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden border-b">
+        {/* Video Background */}
+        <div className="absolute inset-0 z-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover opacity-30"
+          >
+            <source src="/1.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
+        </div>
+
+        <div className="container relative z-10 mx-auto px-4 py-20 md:py-32">
+          <div className="text-center max-w-5xl mx-auto space-y-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium backdrop-blur-sm border border-primary/20">
               <Zap className="w-4 h-4" />
-              <span>법률 마케팅 혁신 솔루션</span>
+              <span>AI 시대 로펌 마케팅 전환</span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-balance leading-snug py-2">
-              AI 법률 이중퍼널 시스템
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-balance leading-tight py-2">
+              사람들은 이제 검색이 아니라
               <br />
-              압도적 성과의 비밀
+              <span className="text-primary">AI에게 먼저 묻고</span> 변호사를 고릅니다
             </h1>
 
-            <p className="text-xl md:text-2xl text-muted-foreground text-balance">
-              기존 법률 마케팅의 한계를 넘어서는 새로운 패러다임
+            <p className="text-xl md:text-2xl text-muted-foreground text-balance max-w-3xl mx-auto leading-relaxed">
+              블로그·지식인 중심 마케팅은 끝났습니다.
+              <br />
+              “챗GPT에게 먼저 물어보는” 이 대화를
+              <br />
+              우리 로펌 전용 AI 퍼널로 가져오는 시스템입니다.
             </p>
 
-            <div className="flex flex-wrap justify-center gap-4 md:gap-6 pt-4">
-              <div className="flex items-center gap-2 px-4 py-2 bg-card rounded-lg border">
-                <Lock className="w-5 h-5 text-primary" />
-                <span className="font-semibold">변호사법 100% 준수</span>
+            <div className="flex flex-col items-center gap-4 pt-4">
+              <button
+                onClick={() => document.getElementById('consultation-form')?.scrollIntoView({ behavior: 'smooth' })}
+                className="px-8 py-4 bg-primary text-primary-foreground text-lg font-bold rounded-full hover:bg-primary/90 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              >
+                무료 컨설팅 신청하기
+              </button>
+              <p className="text-sm md:text-base font-medium text-muted-foreground">
+                AI가 먼저 신뢰를 만들고, 로펌은 정리된 사건만 상담합니다.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-4 md:gap-6 pt-12 text-left">
+              <div className="p-6 bg-card/50 backdrop-blur-sm rounded-xl border shadow-sm hover:bg-card/80 transition-colors">
+                <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
+                  <TrendingUp className="w-5 h-5 text-primary" />
+                  변화된 사용자 행동
+                </h3>
+                <p className="text-muted-foreground text-sm">
+                  검색 → AI 대화 → 변호사 선택
+                  <br />
+                  이미 사용자 행동은 이렇게 바뀌었습니다.
+                </p>
               </div>
-              <div className="flex items-center gap-2 px-4 py-2 bg-card rounded-lg border">
-                <TrendingUp className="w-5 h-5 text-accent" />
-                <span className="font-semibold">전환율 3~10배↑</span>
+              <div className="p-6 bg-card/50 backdrop-blur-sm rounded-xl border shadow-sm hover:bg-card/80 transition-colors">
+                <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
+                  <Target className="w-5 h-5 text-primary" />
+                  로펌 전용 AI의 역할
+                </h3>
+                <p className="text-muted-foreground text-sm">
+                  AI가 의뢰인의 말을 듣고, 정보를 정리하고, 신뢰를 만듭니다. 이 역할을 플랫폼이 아닌 우리 로펌의 AI가 해야 합니다.
+                </p>
               </div>
-              <div className="flex items-center gap-2 px-4 py-2 bg-card rounded-lg border">
-                <Target className="w-5 h-5 text-primary" />
-                <span className="font-semibold">상담 준비 자동화</span>
+              <div className="p-6 bg-card/50 backdrop-blur-sm rounded-xl border shadow-sm hover:bg-card/80 transition-colors">
+                <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
+                  <Zap className="w-5 h-5 text-primary" />
+                  AI 법률 2중 퍼널
+                </h3>
+                <p className="text-muted-foreground text-sm">
+                  익명 상담 AI로 유입을 모으고,
+                  <br />
+                  로그인 사건정리 AI로 상담·수임까지 자동 연결합니다.
+                </p>
               </div>
             </div>
           </div>
@@ -82,10 +131,15 @@ export default function Home() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                기존 법률 마케팅의 문제
+                블로그·검색광고만으로는
                 <br />
-                <span className="text-muted-foreground text-2xl md:text-3xl">(의료 마케팅과 동일한 구조적 한계)</span>
+                이제 고가치 사건이 모이지 않습니다
               </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                의뢰인은 글을 읽지 않고, AI에게 자신의 사정을 털어놓습니다.
+                <br />
+                그런데 그 대화의 주인공은 우리 로펌이 아니라 남의 AI입니다.
+              </p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8 mb-24">
@@ -128,9 +182,13 @@ export default function Home() {
 
             {/* Solution Section - AI Dual Funnel */}
             <div className="mb-24 text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">왜 "AI 이중 퍼널 시스템"이 정답인가?</h2>
-              <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-                기존 법률 마케팅의 문제를 완전히 해결하는 새로운 패러다임입니다.
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                “검색 → AI 대화 → 변호사 선택”
+                <br />
+                이 흐름을 우리 로펌 퍼널로 바꿉니다
+              </h2>
+              <p className="text-lg text-slate-600 max-w-3xl mx-auto font-medium">
+                AI가 먼저 듣고 정리하고 넘겨주는, 로펌 전용 2단계 퍼널입니다.
               </p>
             </div>
 
@@ -141,9 +199,9 @@ export default function Home() {
                   <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
                     <Megaphone className="w-6 h-6 text-primary" />
                   </div>
-                  <h4 className="text-2xl font-bold">라이트 퍼널 (L1)</h4>
+                  <h4 className="text-2xl font-bold">퍼널 1 (L1)</h4>
                 </div>
-                <p className="text-slate-600 mb-4 font-medium">익명·무자격 영역에서 최대 가치 제공</p>
+                <p className="text-slate-600 mb-4 font-medium text-lg">익명 생활법률 AI가 가볍게 대화를 시작하고 신뢰를 형성</p>
                 <ul className="space-y-3 text-slate-600 mb-6">
                   <li className="flex items-start gap-2">
                     <Zap className="w-5 h-5 text-yellow-500 shrink-0 mt-0.5" />
@@ -158,9 +216,6 @@ export default function Home() {
                     <span>판단, 승소, 전략 미제공 (규제 완전 준수)</span>
                   </li>
                 </ul>
-                <div className="p-4 bg-slate-50 rounded-xl text-sm text-slate-500">
-                  👉 기존 블로그·검색 광고가 절대 해줄 수 없는 사용자 문제 인식 단계의 도우미 역할 수행
-                </div>
               </div>
 
               {/* L2 Funnel */}
@@ -169,9 +224,9 @@ export default function Home() {
                   <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
                     <ShieldCheck className="w-6 h-6 text-primary" />
                   </div>
-                  <h4 className="text-2xl font-bold">전문 퍼널 (L2)</h4>
+                  <h4 className="text-2xl font-bold">퍼널 2 (L2)</h4>
                 </div>
-                <p className="text-slate-600 mb-4 font-medium">로그인 후 전문 분석 + 상담 예약</p>
+                <p className="text-slate-600 mb-4 font-medium text-lg">로그인 사건정리 AI가 정보를 구조화하고 상담·예약까지 연결</p>
                 <ul className="space-y-3 text-slate-600 mb-6">
                   <li className="flex items-start gap-2">
                     <Zap className="w-5 h-5 text-blue-500 shrink-0 mt-0.5" />
@@ -186,9 +241,6 @@ export default function Home() {
                     <span>사무실 단일 CRM으로 전달 (변호사법 준수)</span>
                   </li>
                 </ul>
-                <div className="p-4 bg-slate-50 rounded-xl text-sm text-slate-500">
-                  👉 익명 정보 제공 → 분석 → 예약 → CRM으로 완전 전환되는 구조
-                </div>
               </div>
             </div>
 
@@ -196,49 +248,35 @@ export default function Home() {
             <div className="bg-gradient-to-br from-slate-100 to-slate-50 rounded-2xl p-12">
               <div className="text-center mb-12">
                 <h3 className="text-3xl md:text-4xl font-bold mb-4">
-                  이 시스템이 기존 광고 대비 압도적인 이유
+                  AI가 신뢰를 만들고,
+                  <br />
+                  변호사는 정리된 사건만 보면 됩니다
                 </h3>
               </div>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div className="bg-white p-6 rounded-xl shadow-sm">
-                  <h5 className="text-lg font-bold mb-3 flex items-center gap-2">
-                    <TrendingUp className="w-5 h-5 text-red-500" /> 광고 효율 극대화
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="bg-white p-8 rounded-xl shadow-sm border border-slate-100">
+                  <h5 className="text-xl font-bold mb-4 flex items-center gap-2">
+                    <TrendingUp className="w-6 h-6 text-red-500" /> 압도적 전환율
                   </h5>
-                  <p className="text-slate-600 text-sm">
-                    즉시 체류 유도 및 체크리스트 제공으로 기존 랜딩 대비 전환율 3~10배 상승
+                  <p className="text-slate-600">
+                    같은 광고비로도 상담 전환율 3~10배까지 노려볼 수 있는 구조
                   </p>
                 </div>
-                <div className="bg-white p-6 rounded-xl shadow-sm">
-                  <h5 className="text-lg font-bold mb-3 flex items-center gap-2">
-                    <Target className="w-5 h-5 text-blue-500" /> 상담 준비도 상승
+                <div className="bg-white p-8 rounded-xl shadow-sm border border-slate-100">
+                  <h5 className="text-xl font-bold mb-4 flex items-center gap-2">
+                    <Target className="w-6 h-6 text-blue-500" /> AI 초진 처리
                   </h5>
-                  <p className="text-slate-600 text-sm">
-                    변호사에게 "정리된 사건" 전달. 불필요한 질문 감소 및 상담 시간 단축
+                  <p className="text-slate-600">
+                    초진·기초 질문은 AI가 처리하고, 의뢰인의 정보를 체계적으로 정리합니다.
                   </p>
                 </div>
-                <div className="bg-white p-6 rounded-xl shadow-sm">
-                  <h5 className="text-lg font-bold mb-3 flex items-center gap-2">
-                    <Zap className="w-5 h-5 text-yellow-500" /> 업무 효율 증가
+                <div className="bg-white p-8 rounded-xl shadow-sm border border-slate-100">
+                  <h5 className="text-xl font-bold mb-4 flex items-center gap-2">
+                    <Zap className="w-6 h-6 text-yellow-500" /> 핵심 업무 집중
                   </h5>
-                  <p className="text-slate-600 text-sm">
-                    상담 준비 자동화로 하루 상담 처리량 증가 및 사무실 운영 효율 향상
-                  </p>
-                </div>
-                <div className="bg-white p-6 rounded-xl shadow-sm">
-                  <h5 className="text-lg font-bold mb-3 flex items-center gap-2">
-                    <ShieldCheck className="w-5 h-5 text-green-500" /> 규제 완전 회피
-                  </h5>
-                  <p className="text-slate-600 text-sm">
-                    자문 금지, 승소율 언급 금지 등 시스템적 차단으로 안심 도입 가능
-                  </p>
-                </div>
-                <div className="bg-white p-6 rounded-xl shadow-sm">
-                  <h5 className="text-lg font-bold mb-3 flex items-center gap-2">
-                    <RepeatIcon className="w-5 h-5 text-purple-500" /> 지속 가능한 구조
-                  </h5>
-                  <p className="text-slate-600 text-sm">
-                    비용 증가 없이도 시스템 고도화로 전환율이 자연스럽게 증가하는 구조
+                  <p className="text-slate-600">
+                    변호사는 판단·전략·협상 등 본질적인 고부가가치 업무에만 집중할 수 있습니다.
                   </p>
                 </div>
               </div>
@@ -251,7 +289,23 @@ export default function Home() {
       <section className="py-24 bg-white border-t">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">왜 법률서비스에 반드시 도입해야 하는가?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              “AI와 먼저 대화한 의뢰인”을
+              <br />
+              잡는 로펌과 놓치는 로펌
+            </h2>
+            <div className="space-y-4 text-xl text-slate-600">
+              <p>
+                이미 의뢰인의 머릿속 흐름은
+                <br />
+                <span className="font-bold text-primary">검색 → AI 상담 → 변호사 선택</span>으로 바뀌었습니다.
+              </p>
+              <p>
+                지금 우리 로펌 전용 AI를 갖추지 않으면,
+                <br />
+                고가치 사건의 첫 대화는 영원히 남의 시스템에서 시작됩니다.
+              </p>
+            </div>
           </div>
 
           <div className="space-y-8 max-w-5xl mx-auto">
