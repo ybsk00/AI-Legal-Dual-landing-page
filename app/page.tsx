@@ -71,7 +71,7 @@ export default function Home() {
             <p className="text-xl md:text-2xl text-muted-foreground text-balance max-w-3xl mx-auto leading-relaxed">
               블로그·지식인 중심 마케팅은 끝났습니다.
               <br />
-              “챗GPT에게 먼저 물어보는” 이 대화를
+              “AI에게 먼저 물어보는” 이 대화를
               <br />
               우리 로펌 전용 AI 퍼널로 가져오는 시스템입니다.
             </p>
@@ -396,7 +396,7 @@ export default function Home() {
       </section>
 
       {/* Gemini Chat Section */}
-      <section className="py-16 md:py-20 bg-gradient-to-b from-muted/30 to-background">
+      {/* <section className="py-16 md:py-20 bg-gradient-to-b from-muted/30 to-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">24시간 마케팅 상담</h2>
@@ -404,7 +404,7 @@ export default function Home() {
           </div>
           <GeminiChat />
         </div>
-      </section>
+      </section> */}
 
       {/* 상담 신청 폼 */}
       <section id="consultation-form" className="py-16 md:py-20">
