@@ -475,7 +475,7 @@ export default function Home() {
               <Card radius="none" shadow="none" padding={0} bg="black" style={{ overflow: 'hidden' }}>
                 <AspectRatio ratio={16 / 9}>
                   <iframe
-                    src="https://www.youtube.com/embed/HPJx65CpVTI"
+                    src="https://www.youtube.com/embed/hpS7vVrgSkE"
                     title="LLM 기반 이중퍼널 병원 마케팅 솔루션"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
