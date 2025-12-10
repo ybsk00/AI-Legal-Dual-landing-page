@@ -66,7 +66,7 @@ export default function RootLayout({
           />
         </noscript>
       </head>
-      <body className={`font-sans antialiased bg-[#0B0D14] text-white`}>
+      <body className={`font-sans antialiased !bg-[#0B0D14] !text-white`}>
         <MantineProvider theme={theme}>
           {children}
         </MantineProvider>
