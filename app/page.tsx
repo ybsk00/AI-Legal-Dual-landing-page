@@ -102,15 +102,20 @@ export default function Home() {
             </Stack>
 
             <SimpleGrid cols={{ base: 1, md: 3 }} spacing="lg" className="pt-12 w-full text-left">
-              <Card padding="lg" radius="md" className="bg-black/40 backdrop-blur-md border-white/10 hover:bg-black/50 transition-colors">
-                <Stack gap="xs">
+              <Card
+                padding="xl"
+                radius="md"
+                className="bg-white/5 backdrop-blur-md border-white/10 hover:bg-white/10 transition-all duration-300 hover:-translate-y-1"
+                style={{ border: '1px solid rgba(255, 255, 255, 0.1)' }}
+              >
+                <Stack gap="sm">
                   <Group gap="xs" className="text-white">
-                    <ThemeIcon variant="light" color="cyan" radius="xl">
-                      <TrendingUp className="w-4 h-4" />
+                    <ThemeIcon variant="light" color="cyan" radius="xl" size="lg">
+                      <TrendingUp className="w-5 h-5" />
                     </ThemeIcon>
-                    <Text fw={700} size="lg">변화된 사용자 행동</Text>
+                    <Text fw={600} size="lg" style={{ letterSpacing: '-0.02em' }}>변화된 사용자 행동</Text>
                   </Group>
-                  <Text size="sm" className="text-white/80 break-keep">
+                  <Text size="sm" className="text-white/70 break-keep leading-relaxed">
                     검색 → AI 대화 → 변호사 선택
                     <br />
                     이미 사용자 행동은 이렇게 바뀌었습니다.
@@ -118,29 +123,39 @@ export default function Home() {
                 </Stack>
               </Card>
 
-              <Card padding="lg" radius="md" className="bg-black/40 backdrop-blur-md border-white/10 hover:bg-black/50 transition-colors">
-                <Stack gap="xs">
+              <Card
+                padding="xl"
+                radius="md"
+                className="bg-white/5 backdrop-blur-md border-white/10 hover:bg-white/10 transition-all duration-300 hover:-translate-y-1"
+                style={{ border: '1px solid rgba(255, 255, 255, 0.1)' }}
+              >
+                <Stack gap="sm">
                   <Group gap="xs" className="text-white">
-                    <ThemeIcon variant="light" color="cyan" radius="xl">
-                      <Target className="w-4 h-4" />
+                    <ThemeIcon variant="light" color="cyan" radius="xl" size="lg">
+                      <Target className="w-5 h-5" />
                     </ThemeIcon>
-                    <Text fw={700} size="lg">로펌 전용 AI의 역할</Text>
+                    <Text fw={600} size="lg" style={{ letterSpacing: '-0.02em' }}>로펌 전용 AI의 역할</Text>
                   </Group>
-                  <Text size="sm" className="text-white/80 break-keep">
+                  <Text size="sm" className="text-white/70 break-keep leading-relaxed">
                     AI가 의뢰인의 말을 듣고, 정보를 정리하고, 신뢰를 만듭니다. 이 역할을 플랫폼이 아닌 우리 로펌의 AI가 해야 합니다.
                   </Text>
                 </Stack>
               </Card>
 
-              <Card padding="lg" radius="md" className="bg-black/40 backdrop-blur-md border-white/10 hover:bg-black/50 transition-colors">
-                <Stack gap="xs">
+              <Card
+                padding="xl"
+                radius="md"
+                className="bg-white/5 backdrop-blur-md border-white/10 hover:bg-white/10 transition-all duration-300 hover:-translate-y-1"
+                style={{ border: '1px solid rgba(255, 255, 255, 0.1)' }}
+              >
+                <Stack gap="sm">
                   <Group gap="xs" className="text-white">
-                    <ThemeIcon variant="light" color="cyan" radius="xl">
-                      <Zap className="w-4 h-4" />
+                    <ThemeIcon variant="light" color="cyan" radius="xl" size="lg">
+                      <Zap className="w-5 h-5" />
                     </ThemeIcon>
-                    <Text fw={700} size="lg">AI 법률 2중 퍼널</Text>
+                    <Text fw={600} size="lg" style={{ letterSpacing: '-0.02em' }}>AI 법률 2중 퍼널</Text>
                   </Group>
-                  <Text size="sm" className="text-white/80 break-keep">
+                  <Text size="sm" className="text-white/70 break-keep leading-relaxed">
                     익명 상담 AI로 유입을 모으고,
                     <br />
                     로그인 사건정리 AI로 상담·수임까지 자동 연결합니다.
@@ -152,7 +167,6 @@ export default function Home() {
         </Container>
       </section>
 
-      {/* Problem Section */}
       {/* Problem Section */}
       <section className="py-24 md:py-32 bg-gradient-to-b from-slate-50 to-white">
         <Container size="xl">
@@ -170,13 +184,15 @@ export default function Home() {
           </Stack>
 
           <SimpleGrid cols={{ base: 1, md: 3 }} spacing="xl" mb={96}>
-            <Card padding="xl" radius="md" withBorder shadow="sm">
+            <Card padding="xl" radius="md" withBorder className="bg-white hover:border-gray-400 transition-colors duration-300">
               <Stack align="start" gap="md">
-                <ThemeIcon size={48} radius="xl" color="red" variant="light">
-                  <AlertCircle className="w-6 h-6" />
-                </ThemeIcon>
-                <Title order={3} size="h4">1. 블로그/검색광고의 한계</Title>
-                <List spacing="sm" size="sm" center icon={<ThemeIcon color="gray" size={6} radius="xl"><span /></ThemeIcon>}>
+                <Group gap="sm" align="center">
+                  <ThemeIcon size="lg" radius="md" color="gray" variant="light">
+                    <AlertCircle className="w-5 h-5" />
+                  </ThemeIcon>
+                  <Text fw={700} size="lg" c="gray.9">1. 블로그/검색광고의 한계</Text>
+                </Group>
+                <List spacing="sm" size="sm" center icon={<ThemeIcon color="gray" size={6} radius="xl" variant="filled"><span /></ThemeIcon>}>
                   <List.Item>검색량은 많지만 실질적 자문 불가능</List.Item>
                   <List.Item>상담 전 정보 부족으로 낮은 전환율</List.Item>
                   <List.Item>치열한 경쟁으로 클릭 단가만 상승</List.Item>
@@ -184,13 +200,15 @@ export default function Home() {
               </Stack>
             </Card>
 
-            <Card padding="xl" radius="md" withBorder shadow="sm">
+            <Card padding="xl" radius="md" withBorder className="bg-white hover:border-gray-400 transition-colors duration-300">
               <Stack align="start" gap="md">
-                <ThemeIcon size={48} radius="xl" color="orange" variant="light">
-                  <Lock className="w-6 h-6" />
-                </ThemeIcon>
-                <Title order={3} size="h4">2. 광고 규제 문제</Title>
-                <List spacing="sm" size="sm" center icon={<ThemeIcon color="gray" size={6} radius="xl"><span /></ThemeIcon>}>
+                <Group gap="sm" align="center">
+                  <ThemeIcon size="lg" radius="md" color="gray" variant="light">
+                    <Lock className="w-5 h-5" />
+                  </ThemeIcon>
+                  <Text fw={700} size="lg" c="gray.9">2. 광고 규제 문제</Text>
+                </Group>
+                <List spacing="sm" size="sm" center icon={<ThemeIcon color="gray" size={6} radius="xl" variant="filled"><span /></ThemeIcon>}>
                   <List.Item>"승소율", "최고" 등 표현 금지</List.Item>
                   <List.Item>화려한 카피 불가로 광고 효율 한계</List.Item>
                   <List.Item>변호사 직접 추천·선정 금지</List.Item>
@@ -198,13 +216,15 @@ export default function Home() {
               </Stack>
             </Card>
 
-            <Card padding="xl" radius="md" withBorder shadow="sm">
+            <Card padding="xl" radius="md" withBorder className="bg-white hover:border-gray-400 transition-colors duration-300">
               <Stack align="start" gap="md">
-                <ThemeIcon size={48} radius="xl" color="yellow" variant="light">
-                  <Clock className="w-6 h-6" />
-                </ThemeIcon>
-                <Title order={3} size="h4">3. 상담 전 소모적 비용</Title>
-                <List spacing="sm" size="sm" center icon={<ThemeIcon color="gray" size={6} radius="xl"><span /></ThemeIcon>}>
+                <Group gap="sm" align="center">
+                  <ThemeIcon size="lg" radius="md" color="gray" variant="light">
+                    <Clock className="w-5 h-5" />
+                  </ThemeIcon>
+                  <Text fw={700} size="lg" c="gray.9">3. 상담 전 소모적 비용</Text>
+                </Group>
+                <List spacing="sm" size="sm" center icon={<ThemeIcon color="gray" size={6} radius="xl" variant="filled"><span /></ThemeIcon>}>
                   <List.Item>의뢰인의 낮은 사건 설명 능력</List.Item>
                   <List.Item>사실관계 파악에 상담 시간 70% 소모</List.Item>
                   <List.Item>단순 문의 폭증으로 응대 피로도 증가</List.Item>
@@ -215,11 +235,7 @@ export default function Home() {
 
           {/* Solution Section - AI Dual Funnel */}
           <Stack align="center" gap="xl" mb={64} className="text-center">
-            <Title order={2} className="text-3xl md:text-4xl font-bold break-keep">
-              “검색 → AI 대화 → 변호사 선택”
-              <br />
-              이 흐름을 우리 로펌 퍼널로 바꿉니다
-            </Title>
+
             <Text size="lg" c="dimmed" className="max-w-3xl mx-auto font-medium break-keep">
               AI가 먼저 듣고 정리하고 넘겨주는, 로펌 전용 2단계 퍼널입니다.
             </Text>
@@ -227,86 +243,117 @@ export default function Home() {
 
           <SimpleGrid cols={{ base: 1, md: 2 }} spacing="xl" mb={128}>
             {/* L1 Funnel */}
-            <Card padding="xl" radius="lg" withBorder shadow="md" className="border-primary/20">
-              <Stack gap="md">
-                <Group>
-                  <ThemeIcon size={48} radius="xl" variant="light">
-                    <Megaphone className="w-6 h-6" />
-                  </ThemeIcon>
-                  <Title order={3}>퍼널 1 (L1)</Title>
+            <Card padding="lg" radius="md" withBorder className="bg-white border-t-4 border-t-blue-600 shadow-sm hover:shadow-md transition-all duration-300">
+              <Card.Section withBorder inheritPadding py="xs" bg="gray.0">
+                <Group justify="space-between">
+                  <Group gap="xs">
+                    <ThemeIcon size="md" radius="sm" variant="filled" color="blue">
+                      <Megaphone className="w-4 h-4" />
+                    </ThemeIcon>
+                    <Text size="sm" fw={700} c="blue.9" tt="uppercase">Funnel 01</Text>
+                  </Group>
+                  <Badge variant="light" color="blue" size="sm">STEP 1</Badge>
                 </Group>
-                <Text size="lg" fw={500} c="dimmed">익명 생활법률 AI가 가볍게 대화를 시작하고 신뢰를 형성</Text>
-                <List spacing="sm" icon={<ThemeIcon color="yellow" size={20} radius="xl"><Zap size={12} /></ThemeIcon>}>
-                  <List.Item>AI 사건 유형 자동 분류 (회생, 형사, 이혼 등)</List.Item>
-                  <List.Item>필요한 자료 및 기본 체크리스트 제공</List.Item>
-                  <List.Item icon={<ThemeIcon color="green" size={20} radius="xl"><ShieldCheck size={12} /></ThemeIcon>}>
-                    판단, 승소, 전략 미제공 (규제 완전 준수)
-                  </List.Item>
-                </List>
+              </Card.Section>
+
+              <Stack gap="md" mt="md">
+                <Title order={3} size="h3" fw={700}>익명 생활법률 AI</Title>
+                <Text size="sm" c="dimmed" lh={1.6}>
+                  가벼운 대화로 시작하여 의뢰인의 심리적 장벽을 낮추고, 자연스럽게 신뢰를 형성합니다.
+                </Text>
+
+                <Card withBorder radius="sm" p="sm" bg="gray.0" className="border-dashed">
+                  <List spacing="xs" size="sm" icon={<ThemeIcon color="blue" size={16} radius="xl" variant="filled"><Zap size={10} /></ThemeIcon>}>
+                    <List.Item>AI 사건 유형 자동 분류 (회생, 형사, 이혼 등)</List.Item>
+                    <List.Item>필요한 자료 및 기본 체크리스트 제공</List.Item>
+                    <List.Item icon={<ThemeIcon color="green" size={16} radius="xl" variant="filled"><ShieldCheck size={10} /></ThemeIcon>}>
+                      판단, 승소, 전략 미제공 (규제 완전 준수)
+                    </List.Item>
+                  </List>
+                </Card>
               </Stack>
             </Card>
 
             {/* L2 Funnel */}
-            <Card padding="xl" radius="lg" withBorder shadow="md" className="border-primary/20">
-              <Stack gap="md">
-                <Group>
-                  <ThemeIcon size={48} radius="xl" variant="light">
-                    <ShieldCheck className="w-6 h-6" />
-                  </ThemeIcon>
-                  <Title order={3}>퍼널 2 (L2)</Title>
+            <Card padding="lg" radius="md" withBorder className="bg-white border-t-4 border-t-indigo-700 shadow-sm hover:shadow-md transition-all duration-300">
+              <Card.Section withBorder inheritPadding py="xs" bg="gray.0">
+                <Group justify="space-between">
+                  <Group gap="xs">
+                    <ThemeIcon size="md" radius="sm" variant="filled" color="indigo">
+                      <ShieldCheck className="w-4 h-4" />
+                    </ThemeIcon>
+                    <Text size="sm" fw={700} c="indigo.9" tt="uppercase">Funnel 02</Text>
+                  </Group>
+                  <Badge variant="light" color="indigo" size="sm">STEP 2</Badge>
                 </Group>
-                <Text size="lg" fw={500} c="dimmed">로그인 사건정리 AI가 정보를 구조화하고 상담·예약까지 연결</Text>
-                <List spacing="sm" icon={<ThemeIcon color="blue" size={20} radius="xl"><Zap size={12} /></ThemeIcon>}>
-                  <List.Item>AI가 사실관계를 JSON 구조화하여 정리</List.Item>
-                  <List.Item>"정리된 사건 개요" 및 타임라인 자동 생성</List.Item>
-                  <List.Item icon={<ThemeIcon color="green" size={20} radius="xl"><ShieldCheck size={12} /></ThemeIcon>}>
-                    사무실 단일 CRM으로 전달 (변호사법 준수)
-                  </List.Item>
-                </List>
+              </Card.Section>
+
+              <Stack gap="md" mt="md">
+                <Title order={3} size="h3" fw={700}>사건정리 AI</Title>
+                <Text size="sm" c="dimmed" lh={1.6}>
+                  확보된 신뢰를 바탕으로 구체적인 사실관계를 파악하고, 상담 가능한 형태로 구조화합니다.
+                </Text>
+
+                <Card withBorder radius="sm" p="sm" bg="gray.0" className="border-dashed">
+                  <List spacing="xs" size="sm" icon={<ThemeIcon color="indigo" size={16} radius="xl" variant="filled"><Zap size={10} /></ThemeIcon>}>
+                    <List.Item>AI가 사실관계를 JSON 구조화하여 정리</List.Item>
+                    <List.Item>"정리된 사건 개요" 및 타임라인 자동 생성</List.Item>
+                    <List.Item icon={<ThemeIcon color="green" size={16} radius="xl" variant="filled"><ShieldCheck size={10} /></ThemeIcon>}>
+                      사무실 단일 CRM으로 전달 (변호사법 준수)
+                    </List.Item>
+                  </List>
+                </Card>
               </Stack>
             </Card>
           </SimpleGrid>
 
           {/* Advantages Section */}
-          <Card padding={48} radius="xl" className="bg-gradient-to-br from-slate-100 to-slate-50">
-            <Stack align="center" gap="xl" mb={48} className="text-center">
-              <Title order={3} className="text-3xl md:text-4xl font-bold break-keep">
+          <Card padding={64} radius="xl" className="bg-gradient-to-br from-slate-900 to-slate-800 text-white overflow-hidden relative">
+            <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10" />
+            <Stack align="center" gap="xl" mb={64} className="text-center relative z-10">
+              <Title order={3} className="text-3xl md:text-4xl font-bold break-keep text-white">
                 AI가 신뢰를 만들고,
                 <br />
                 변호사는 정리된 사건만 보면 됩니다
               </Title>
             </Stack>
 
-            <SimpleGrid cols={{ base: 1, md: 3 }} spacing="xl">
-              <Card padding="xl" radius="md" withBorder>
+            <SimpleGrid cols={{ base: 1, md: 3 }} spacing="xl" className="relative z-10">
+              <Card padding="xl" radius="md" className="bg-white/10 backdrop-blur-md border-white/10 hover:bg-white/20 transition-all duration-300">
                 <Stack gap="md">
                   <Group>
-                    <ThemeIcon color="red" variant="light" size="lg"><TrendingUp size={20} /></ThemeIcon>
-                    <Text fw={700} size="lg">압도적 전환율</Text>
+                    <ThemeIcon color="red" variant="light" size="xl" radius="md" className="bg-red-500/20 text-red-200">
+                      <TrendingUp size={24} />
+                    </ThemeIcon>
+                    <Text fw={700} size="lg" c="white">압도적 전환율</Text>
                   </Group>
-                  <Text size="sm" c="dimmed">
+                  <Text size="sm" c="dimmed" className="text-white/70">
                     같은 광고비로도 상담 전환율 3~10배까지 노려볼 수 있는 구조
                   </Text>
                 </Stack>
               </Card>
-              <Card padding="xl" radius="md" withBorder>
+              <Card padding="xl" radius="md" className="bg-white/10 backdrop-blur-md border-white/10 hover:bg-white/20 transition-all duration-300">
                 <Stack gap="md">
                   <Group>
-                    <ThemeIcon color="blue" variant="light" size="lg"><Target size={20} /></ThemeIcon>
-                    <Text fw={700} size="lg">AI 초진 처리</Text>
+                    <ThemeIcon color="blue" variant="light" size="xl" radius="md" className="bg-blue-500/20 text-blue-200">
+                      <Target size={24} />
+                    </ThemeIcon>
+                    <Text fw={700} size="lg" c="white">AI 초진 처리</Text>
                   </Group>
-                  <Text size="sm" c="dimmed">
+                  <Text size="sm" c="dimmed" className="text-white/70">
                     초진·기초 질문은 AI가 처리하고, 의뢰인의 정보를 체계적으로 정리합니다.
                   </Text>
                 </Stack>
               </Card>
-              <Card padding="xl" radius="md" withBorder>
+              <Card padding="xl" radius="md" className="bg-white/10 backdrop-blur-md border-white/10 hover:bg-white/20 transition-all duration-300">
                 <Stack gap="md">
                   <Group>
-                    <ThemeIcon color="yellow" variant="light" size="lg"><Zap size={20} /></ThemeIcon>
-                    <Text fw={700} size="lg">핵심 업무 집중</Text>
+                    <ThemeIcon color="yellow" variant="light" size="xl" radius="md" className="bg-yellow-500/20 text-yellow-200">
+                      <Zap size={24} />
+                    </ThemeIcon>
+                    <Text fw={700} size="lg" c="white">핵심 업무 집중</Text>
                   </Group>
-                  <Text size="sm" c="dimmed">
+                  <Text size="sm" c="dimmed" className="text-white/70">
                     변호사는 판단·전략·협상 등 본질적인 고부가가치 업무에만 집중할 수 있습니다.
                   </Text>
                 </Stack>
@@ -316,7 +363,6 @@ export default function Home() {
         </Container>
       </section>
 
-      {/* Necessity Section */}
       {/* Necessity Section */}
       <section className="py-24 bg-white border-t">
         <Container size="xl">
@@ -341,42 +387,45 @@ export default function Home() {
           </Stack>
 
           <Stack gap="lg" maw={1024} mx="auto">
-            <Card padding="xl" radius="md" className="bg-slate-50">
+            <Card padding="lg" radius="md" withBorder className="bg-white hover:border-blue-400 transition-colors duration-300">
               <Group align="start" wrap="nowrap">
-                <ThemeIcon size={48} radius="xl" color="blue" variant="light">
+                <ThemeIcon size={48} radius="md" color="blue" variant="light" className="shrink-0">
                   <Users className="w-6 h-6" />
                 </ThemeIcon>
                 <div>
-                  <Title order={4} size="h3" mb="xs">사건의 90%는 "기초 정보 파악"에서 이탈합니다</Title>
-                  <Text c="dimmed">
+                  <Text size="sm" fw={700} c="blue" mb={4}>PROBLEM 01</Text>
+                  <Title order={4} size="h3" mb="xs" fw={700}>사건의 90%는 "기초 정보 파악"에서 이탈합니다</Title>
+                  <Text c="dimmed" size="md" lh={1.6}>
                     의뢰인은 자신의 문제를 명확히 설명하지 못해 상담 전 이탈합니다. 라이트 AI가 이를 대신 정리해주면 상담 준비도가 폭발적으로 증가합니다.
                   </Text>
                 </div>
               </Group>
             </Card>
 
-            <Card padding="xl" radius="md" className="bg-slate-50">
+            <Card padding="lg" radius="md" withBorder className="bg-white hover:border-green-400 transition-colors duration-300">
               <Group align="start" wrap="nowrap">
-                <ThemeIcon size={48} radius="xl" color="green" variant="light">
+                <ThemeIcon size={48} radius="md" color="green" variant="light" className="shrink-0">
                   <Clock className="w-6 h-6" />
                 </ThemeIcon>
                 <div>
-                  <Title order={4} size="h3" mb="xs">변호사의 시간과 리소스는 제한적입니다</Title>
-                  <Text c="dimmed">
+                  <Text size="sm" fw={700} c="green" mb={4}>PROBLEM 02</Text>
+                  <Title order={4} size="h3" mb="xs" fw={700}>변호사의 시간과 리소스는 제한적입니다</Title>
+                  <Text c="dimmed" size="md" lh={1.6}>
                     초동 상담에 뺏기는 시간을 자동화하여, 변호사님은 사건 판단과 전략 수립이라는 본질적인 업무에 집중할 수 있습니다.
                   </Text>
                 </div>
               </Group>
             </Card>
 
-            <Card padding="xl" radius="md" className="bg-slate-50">
+            <Card padding="lg" radius="md" withBorder className="bg-white hover:border-purple-400 transition-colors duration-300">
               <Group align="start" wrap="nowrap">
-                <ThemeIcon size={48} radius="xl" color="purple" variant="light">
+                <ThemeIcon size={48} radius="md" color="purple" variant="light" className="shrink-0">
                   <TrendingUp className="w-6 h-6" />
                 </ThemeIcon>
                 <div>
-                  <Title order={4} size="h3" mb="xs">경쟁 로펌 대비 압도적 디지털 전환</Title>
-                  <Text c="dimmed">
+                  <Text size="sm" fw={700} c="purple" mb={4}>OPPORTUNITY</Text>
+                  <Title order={4} size="h3" mb="xs" fw={700}>경쟁 로펌 대비 압도적 디지털 전환</Title>
+                  <Text c="dimmed" size="md" lh={1.6}>
                     단순 블로그 경쟁을 넘어, AI 기반 구조화 시스템을 선점함으로써 광고 경쟁력이 6개월~1년 단위로 벌어지게 됩니다.
                   </Text>
                 </div>
@@ -386,7 +435,6 @@ export default function Home() {
         </Container>
       </section>
 
-      {/* Webtoon Section */}
       {/* Webtoon Section */}
       <section className="py-24 md:py-32 bg-background">
         <Container size="xl">
@@ -427,18 +475,6 @@ export default function Home() {
         </Container>
       </section>
 
-      {/* Gemini Chat Section */}
-      {/* <section className="py-16 md:py-20 bg-gradient-to-b from-muted/30 to-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">24시간 마케팅 상담</h2>
-            <p className="text-lg text-muted-foreground">혁신적인 법률 마케팅 방법에 대해서 궁금하신 점이 있으신가요? 무엇이든지 물어보세요</p>
-          </div>
-          <GeminiChat />
-        </div>
-      </section> */}
-
-      {/* 상담 신청 폼 */}
       {/* 상담 신청 폼 */}
       <section id="consultation-form" className="py-16 md:py-20">
         <Container size="xl">
@@ -477,6 +513,6 @@ export default function Home() {
           </Stack>
         </Container>
       </footer>
-    </main>
+    </main >
   )
 }
