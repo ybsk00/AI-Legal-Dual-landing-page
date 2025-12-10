@@ -7,6 +7,8 @@ import { ColorSchemeScript, MantineProvider } from "@mantine/core"
 import { theme } from "./theme"
 import "./globals.css"
 import "@mantine/core/styles.css"
+import { MetaPixel } from "@/components/MetaPixel"
+import { MetaPixelEvents } from "@/components/MetaPixelEvents"
 
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
@@ -36,37 +38,11 @@ export default function RootLayout({
           `}
         </Script>
 
-        <Script id="meta-pixel" strategy="afterInteractive">
-          {`
-            !function(f,b,e,v,n,t,s)
-            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-            n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)}(window, document,'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-            
-            fbq('init', '24138350019134425');
-            fbq('track', 'PageView');
-            
-            fbq('track', 'ViewContent', {
-              content_name: 'Hospital Marketing Landing Page',
-              content_category: 'LLM Marketing Solution'
-            });
-          `}
-        </Script>
-        <noscript>
-          <img
-            height="1"
-            width="1"
-            style={{ display: "none" }}
-            src="https://www.facebook.com/tr?id=24138350019134425&ev=PageView&noscript=1"
-            alt=""
-          />
-        </noscript>
+
       </head>
       <body className={`font-sans antialiased !bg-[#0B0D14] !text-white`}>
+        <MetaPixel />
+        <MetaPixelEvents />
         <MantineProvider theme={theme}>
           {children}
         </MantineProvider>
