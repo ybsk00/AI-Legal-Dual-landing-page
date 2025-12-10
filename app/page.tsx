@@ -105,17 +105,17 @@ export default function Home() {
               <Card
                 padding="xl"
                 radius="md"
-                className="bg-black/40 backdrop-blur-md border-white/20 hover:bg-black/50 transition-all duration-300 hover:-translate-y-1"
-                style={{ border: '1px solid rgba(255, 255, 255, 0.2)' }}
+                className="bg-[#1A1B1E] border-gray-700 hover:border-blue-500 transition-all duration-300 hover:-translate-y-1"
+                withBorder
               >
                 <Stack gap="sm">
-                  <Group gap="xs" className="text-white">
-                    <ThemeIcon variant="light" color="cyan" radius="xl" size="lg">
+                  <Group gap="xs">
+                    <ThemeIcon variant="light" color="blue" radius="xl" size="lg" className="bg-blue-900/30">
                       <TrendingUp className="w-5 h-5" />
                     </ThemeIcon>
-                    <Text fw={600} size="lg" style={{ letterSpacing: '-0.02em' }}>변화된 사용자 행동</Text>
+                    <Text fw={600} size="lg" c="white" style={{ letterSpacing: '-0.02em' }}>변화된 사용자 행동</Text>
                   </Group>
-                  <Text size="sm" className="text-white/70 break-keep leading-relaxed">
+                  <Text size="sm" c="dimmed" className="text-gray-300 break-keep leading-relaxed">
                     검색 → AI 대화 → 변호사 선택
                     <br />
                     이미 사용자 행동은 이렇게 바뀌었습니다.
@@ -126,17 +126,17 @@ export default function Home() {
               <Card
                 padding="xl"
                 radius="md"
-                className="bg-black/40 backdrop-blur-md border-white/20 hover:bg-black/50 transition-all duration-300 hover:-translate-y-1"
-                style={{ border: '1px solid rgba(255, 255, 255, 0.2)' }}
+                className="bg-[#1A1B1E] border-gray-700 hover:border-blue-500 transition-all duration-300 hover:-translate-y-1"
+                withBorder
               >
                 <Stack gap="sm">
-                  <Group gap="xs" className="text-white">
-                    <ThemeIcon variant="light" color="cyan" radius="xl" size="lg">
+                  <Group gap="xs">
+                    <ThemeIcon variant="light" color="blue" radius="xl" size="lg" className="bg-blue-900/30">
                       <Target className="w-5 h-5" />
                     </ThemeIcon>
-                    <Text fw={600} size="lg" style={{ letterSpacing: '-0.02em' }}>로펌 전용 AI의 역할</Text>
+                    <Text fw={600} size="lg" c="white" style={{ letterSpacing: '-0.02em' }}>로펌 전용 AI의 역할</Text>
                   </Group>
-                  <Text size="sm" className="text-white/70 break-keep leading-relaxed">
+                  <Text size="sm" c="dimmed" className="text-gray-300 break-keep leading-relaxed">
                     AI가 의뢰인의 말을 듣고, 정보를 정리하고, 신뢰를 만듭니다. 이 역할을 플랫폼이 아닌 우리 로펌의 AI가 해야 합니다.
                   </Text>
                 </Stack>
@@ -145,17 +145,17 @@ export default function Home() {
               <Card
                 padding="xl"
                 radius="md"
-                className="bg-black/40 backdrop-blur-md border-white/20 hover:bg-black/50 transition-all duration-300 hover:-translate-y-1"
-                style={{ border: '1px solid rgba(255, 255, 255, 0.2)' }}
+                className="bg-[#1A1B1E] border-gray-700 hover:border-blue-500 transition-all duration-300 hover:-translate-y-1"
+                withBorder
               >
                 <Stack gap="sm">
-                  <Group gap="xs" className="text-white">
-                    <ThemeIcon variant="light" color="cyan" radius="xl" size="lg">
+                  <Group gap="xs">
+                    <ThemeIcon variant="light" color="blue" radius="xl" size="lg" className="bg-blue-900/30">
                       <Zap className="w-5 h-5" />
                     </ThemeIcon>
-                    <Text fw={600} size="lg" style={{ letterSpacing: '-0.02em' }}>AI 법률 2중 퍼널</Text>
+                    <Text fw={600} size="lg" c="white" style={{ letterSpacing: '-0.02em' }}>AI 법률 2중 퍼널</Text>
                   </Group>
-                  <Text size="sm" className="text-white/70 break-keep leading-relaxed">
+                  <Text size="sm" c="dimmed" className="text-gray-300 break-keep leading-relaxed">
                     익명 상담 AI로 유입을 모으고,
                     <br />
                     로그인 사건정리 AI로 상담·수임까지 자동 연결합니다.
@@ -319,41 +319,41 @@ export default function Home() {
             </Stack>
 
             <SimpleGrid cols={{ base: 1, md: 3 }} spacing="xl" className="relative z-10">
-              <Card padding="xl" radius="md" className="bg-white/10 backdrop-blur-md border-white/20 hover:bg-white/20 transition-all duration-300" style={{ border: '1px solid rgba(255, 255, 255, 0.2)' }}>
+              <Card padding="xl" radius="md" className="bg-[#1A1B1E] border-gray-700 hover:border-blue-500 transition-all duration-300" withBorder>
                 <Stack gap="md">
                   <Group>
-                    <ThemeIcon color="red" variant="light" size="xl" radius="md" className="bg-red-500/20 text-red-200">
+                    <ThemeIcon color="red" variant="light" size="xl" radius="md" className="bg-red-900/30 text-red-200">
                       <TrendingUp size={24} />
                     </ThemeIcon>
                     <Text fw={700} size="lg" c="white">압도적 전환율</Text>
                   </Group>
-                  <Text size="sm" c="dimmed" className="text-white/70">
+                  <Text size="sm" c="dimmed" className="text-gray-300">
                     같은 광고비로도 상담 전환율 3~10배까지 노려볼 수 있는 구조
                   </Text>
                 </Stack>
               </Card>
-              <Card padding="xl" radius="md" className="bg-white/10 backdrop-blur-md border-white/20 hover:bg-white/20 transition-all duration-300" style={{ border: '1px solid rgba(255, 255, 255, 0.2)' }}>
+              <Card padding="xl" radius="md" className="bg-[#1A1B1E] border-gray-700 hover:border-blue-500 transition-all duration-300" withBorder>
                 <Stack gap="md">
                   <Group>
-                    <ThemeIcon color="blue" variant="light" size="xl" radius="md" className="bg-blue-500/20 text-blue-200">
+                    <ThemeIcon color="blue" variant="light" size="xl" radius="md" className="bg-blue-900/30 text-blue-200">
                       <Target size={24} />
                     </ThemeIcon>
                     <Text fw={700} size="lg" c="white">AI 초진 처리</Text>
                   </Group>
-                  <Text size="sm" c="dimmed" className="text-white/70">
+                  <Text size="sm" c="dimmed" className="text-gray-300">
                     초진·기초 질문은 AI가 처리하고, 의뢰인의 정보를 체계적으로 정리합니다.
                   </Text>
                 </Stack>
               </Card>
-              <Card padding="xl" radius="md" className="bg-white/10 backdrop-blur-md border-white/20 hover:bg-white/20 transition-all duration-300" style={{ border: '1px solid rgba(255, 255, 255, 0.2)' }}>
+              <Card padding="xl" radius="md" className="bg-[#1A1B1E] border-gray-700 hover:border-blue-500 transition-all duration-300" withBorder>
                 <Stack gap="md">
                   <Group>
-                    <ThemeIcon color="yellow" variant="light" size="xl" radius="md" className="bg-yellow-500/20 text-yellow-200">
+                    <ThemeIcon color="yellow" variant="light" size="xl" radius="md" className="bg-yellow-900/30 text-yellow-200">
                       <Zap size={24} />
                     </ThemeIcon>
                     <Text fw={700} size="lg" c="white">핵심 업무 집중</Text>
                   </Group>
-                  <Text size="sm" c="dimmed" className="text-white/70">
+                  <Text size="sm" c="dimmed" className="text-gray-300">
                     변호사는 판단·전략·협상 등 본질적인 고부가가치 업무에만 집중할 수 있습니다.
                   </Text>
                 </Stack>
