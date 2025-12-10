@@ -168,15 +168,15 @@ export default function Home() {
       </section>
 
       {/* Problem Section */}
-      <section className="py-24 md:py-32 bg-gradient-to-b from-slate-50 to-white">
+      <section className="py-24 md:py-32 bg-transparent">
         <Container size="xl">
           <Stack align="center" gap="xl" mb={64} className="text-center">
-            <Title order={2} className="text-3xl md:text-4xl font-bold break-keep">
+            <Title order={2} className="text-3xl md:text-4xl font-bold break-keep" c="white">
               블로그·검색광고만으로는
               <br />
               이제 고가치 사건이 모이지 않습니다
             </Title>
-            <Text size="xl" c="dimmed" className="max-w-3xl mx-auto break-keep">
+            <Text size="xl" c="dimmed" className="max-w-3xl mx-auto break-keep text-gray-300">
               의뢰인은 글을 읽지 않고, AI에게 자신의 사정을 털어놓습니다.
               <br />
               그런데 그 대화의 주인공은 우리 로펌이 아니라 남의 AI입니다.
@@ -364,7 +364,7 @@ export default function Home() {
       </section>
 
       {/* Necessity Section */}
-      <section className="py-24 bg-white border-t">
+      <section className="py-24 bg-transparent border-t border-gray-800">
         <Container size="xl">
           <Stack align="center" gap="xl" mb={64} className="text-center">
             <Title order={2} className="text-3xl md:text-4xl font-bold break-keep">
@@ -387,45 +387,45 @@ export default function Home() {
           </Stack>
 
           <Stack gap="lg" maw={1024} mx="auto">
-            <Card padding="lg" radius="md" withBorder className="bg-white hover:border-blue-400 transition-colors duration-300">
+            <Card padding="lg" radius="md" withBorder className="!bg-[#151932] border-[#3b4262] hover:border-blue-400 transition-colors duration-300">
               <Group align="start" wrap="nowrap">
-                <ThemeIcon size={48} radius="md" color="blue" variant="light" className="shrink-0">
-                  <Users className="w-6 h-6" />
+                <ThemeIcon size={48} radius="md" color="blue" variant="light" className="shrink-0 bg-blue-900/30">
+                  <Users className="w-6 h-6 text-blue-200" />
                 </ThemeIcon>
                 <div>
-                  <Text size="sm" fw={700} c="blue" mb={4}>PROBLEM 01</Text>
-                  <Title order={4} size="h3" mb="xs" fw={700}>사건의 90%는 "기초 정보 파악"에서 이탈합니다</Title>
-                  <Text c="dimmed" size="md" lh={1.6}>
+                  <Text size="sm" fw={700} c="blue.2" mb={4}>PROBLEM 01</Text>
+                  <Title order={4} size="h3" mb="xs" fw={700} c="white">사건의 90%는 "기초 정보 파악"에서 이탈합니다</Title>
+                  <Text c="dimmed" size="md" lh={1.6} className="text-gray-300">
                     의뢰인은 자신의 문제를 명확히 설명하지 못해 상담 전 이탈합니다. 라이트 AI가 이를 대신 정리해주면 상담 준비도가 폭발적으로 증가합니다.
                   </Text>
                 </div>
               </Group>
             </Card>
 
-            <Card padding="lg" radius="md" withBorder className="bg-white hover:border-green-400 transition-colors duration-300">
+            <Card padding="lg" radius="md" withBorder className="!bg-[#151932] border-[#3b4262] hover:border-green-400 transition-colors duration-300">
               <Group align="start" wrap="nowrap">
-                <ThemeIcon size={48} radius="md" color="green" variant="light" className="shrink-0">
-                  <Clock className="w-6 h-6" />
+                <ThemeIcon size={48} radius="md" color="green" variant="light" className="shrink-0 bg-green-900/30">
+                  <Clock className="w-6 h-6 text-green-200" />
                 </ThemeIcon>
                 <div>
-                  <Text size="sm" fw={700} c="green" mb={4}>PROBLEM 02</Text>
-                  <Title order={4} size="h3" mb="xs" fw={700}>변호사의 시간과 리소스는 제한적입니다</Title>
-                  <Text c="dimmed" size="md" lh={1.6}>
+                  <Text size="sm" fw={700} c="green.2" mb={4}>PROBLEM 02</Text>
+                  <Title order={4} size="h3" mb="xs" fw={700} c="white">변호사의 시간과 리소스는 제한적입니다</Title>
+                  <Text c="dimmed" size="md" lh={1.6} className="text-gray-300">
                     초동 상담에 뺏기는 시간을 자동화하여, 변호사님은 사건 판단과 전략 수립이라는 본질적인 업무에 집중할 수 있습니다.
                   </Text>
                 </div>
               </Group>
             </Card>
 
-            <Card padding="lg" radius="md" withBorder className="bg-white hover:border-purple-400 transition-colors duration-300">
+            <Card padding="lg" radius="md" withBorder className="!bg-[#151932] border-[#3b4262] hover:border-purple-400 transition-colors duration-300">
               <Group align="start" wrap="nowrap">
-                <ThemeIcon size={48} radius="md" color="purple" variant="light" className="shrink-0">
-                  <TrendingUp className="w-6 h-6" />
+                <ThemeIcon size={48} radius="md" color="purple" variant="light" className="shrink-0 bg-purple-900/30">
+                  <TrendingUp className="w-6 h-6 text-purple-200" />
                 </ThemeIcon>
                 <div>
-                  <Text size="sm" fw={700} c="purple" mb={4}>OPPORTUNITY</Text>
-                  <Title order={4} size="h3" mb="xs" fw={700}>경쟁 로펌 대비 압도적 디지털 전환</Title>
-                  <Text c="dimmed" size="md" lh={1.6}>
+                  <Text size="sm" fw={700} c="purple.2" mb={4}>OPPORTUNITY</Text>
+                  <Title order={4} size="h3" mb="xs" fw={700} c="white">경쟁 로펌 대비 압도적 디지털 전환</Title>
+                  <Text c="dimmed" size="md" lh={1.6} className="text-gray-300">
                     단순 블로그 경쟁을 넘어, AI 기반 구조화 시스템을 선점함으로써 광고 경쟁력이 6개월~1년 단위로 벌어지게 됩니다.
                   </Text>
                 </div>
@@ -436,10 +436,10 @@ export default function Home() {
       </section>
 
       {/* Webtoon Section */}
-      <section className="py-24 md:py-32 bg-background">
+      <section className="py-24 md:py-32 bg-transparent">
         <Container size="xl">
           <Stack align="center" gap="xl" mb={48} className="text-center">
-            <Title order={2} className="text-3xl md:text-4xl font-bold">기존 법률 광고는 끝났습니다</Title>
+            <Title order={2} className="text-3xl md:text-4xl font-bold" c="white">기존 법률 광고는 끝났습니다</Title>
             <Text size="lg" c="dimmed">AI 이중퍼널 시스템으로 변화하는 법률 시장의 미래</Text>
           </Stack>
 
@@ -454,10 +454,10 @@ export default function Home() {
       </section>
 
       {/* YouTube Video Section */}
-      <section className="py-16 md:py-20 bg-gray-50">
+      <section className="py-16 md:py-20 bg-transparent">
         <Container size="lg">
           <Stack align="center" gap="xl" mb={32} className="text-center">
-            <Title order={2} className="text-3xl md:text-4xl font-bold">솔루션 소개 영상</Title>
+            <Title order={2} className="text-3xl md:text-4xl font-bold" c="white">솔루션 소개 영상</Title>
             <Text size="lg" c="dimmed">LLM 기반 이중퍼널 시스템을 영상으로 확인하세요</Text>
           </Stack>
 
@@ -479,7 +479,7 @@ export default function Home() {
       <section id="consultation-form" className="py-16 md:py-20">
         <Container size="xl">
           <Stack align="center" gap="xl" mb={48} className="text-center">
-            <Title order={2} className="text-3xl md:text-4xl font-bold">무료 컨설팅 및 데모 신청하기</Title>
+            <Title order={2} className="text-3xl md:text-4xl font-bold" c="white">무료 컨설팅 및 데모 신청하기</Title>
             <Text size="lg" c="dimmed">빠르게 연락드리고 상담을 해드리도록 하겠습니다</Text>
           </Stack>
 
@@ -488,7 +488,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t bg-gray-50 py-12">
+      <footer className="border-t border-gray-800 bg-[#0B0D14] py-12">
         <Container size="lg">
           <Stack gap="lg" align="center">
             <Card withBorder radius="md" p="md" bg="orange.0" className="border-orange-200">
