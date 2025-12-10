@@ -262,7 +262,7 @@ export default function Home() {
                   가벼운 대화로 시작하여 의뢰인의 심리적 장벽을 낮추고, 자연스럽게 신뢰를 형성합니다.
                 </Text>
 
-                <Card withBorder radius="sm" p="sm" className="bg-[#1C2333] border-dashed border-[#3b4262]">
+                <Card withBorder radius="sm" p="sm" className="!bg-[#1C2333] border-dashed border-[#3b4262]">
                   <List spacing="xs" size="sm" icon={<ThemeIcon color="blue" size={16} radius="xl" variant="filled"><Zap size={10} /></ThemeIcon>}>
                     <List.Item className="text-gray-300">AI 사건 유형 자동 분류 (회생, 형사, 이혼 등)</List.Item>
                     <List.Item className="text-gray-300">필요한 자료 및 기본 체크리스트 제공</List.Item>
@@ -294,7 +294,7 @@ export default function Home() {
                   확보된 신뢰를 바탕으로 구체적인 사실관계를 파악하고, 상담 가능한 형태로 구조화합니다.
                 </Text>
 
-                <Card withBorder radius="sm" p="sm" className="bg-[#1C2333] border-dashed border-[#3b4262]">
+                <Card withBorder radius="sm" p="sm" className="!bg-[#1C2333] border-dashed border-[#3b4262]">
                   <List spacing="xs" size="sm" icon={<ThemeIcon color="indigo" size={16} radius="xl" variant="filled"><Zap size={10} /></ThemeIcon>}>
                     <List.Item className="text-gray-300">AI가 사실관계를 JSON 구조화하여 정리</List.Item>
                     <List.Item className="text-gray-300">"정리된 사건 개요" 및 타임라인 자동 생성</List.Item>

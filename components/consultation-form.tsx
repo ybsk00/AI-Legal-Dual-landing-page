@@ -113,16 +113,16 @@ export function ConsultationForm() {
   }
 
   return (
-    <Card className="w-full max-w-2xl mx-auto shadow-lg border-2">
+    <Card className="w-full max-w-2xl mx-auto shadow-lg border-2 !bg-[#151932] border-[#3b4262]">
       <CardHeader className="text-center space-y-2">
-        <CardTitle className="text-2xl md:text-3xl">상담 신청</CardTitle>
-        <CardDescription className="text-base">빠르게 연락드리고 상담을 해드리도록 하겠습니다</CardDescription>
+        <CardTitle className="text-2xl md:text-3xl text-white">상담 신청</CardTitle>
+        <CardDescription className="text-base text-gray-300">빠르게 연락드리고 상담을 해드리도록 하겠습니다</CardDescription>
       </CardHeader>
       <CardContent>
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* 개인정보 제공 동의 */}
           <div className="space-y-3">
-            <Label className="text-base font-semibold">
+            <Label className="text-base font-semibold text-white">
               개인정보 제공에 동의합니까? <span className="text-destructive">*</span>
             </Label>
             <RadioGroup
@@ -131,14 +131,14 @@ export function ConsultationForm() {
               required
             >
               <div className="flex items-center space-x-2">
-                <RadioGroupItem value="yes" id="consent-yes" />
-                <Label htmlFor="consent-yes" className="font-normal cursor-pointer">
+                <RadioGroupItem value="yes" id="consent-yes" className="border-white text-white" />
+                <Label htmlFor="consent-yes" className="font-normal cursor-pointer text-gray-300">
                   예
                 </Label>
               </div>
               <div className="flex items-center space-x-2">
-                <RadioGroupItem value="no" id="consent-no" />
-                <Label htmlFor="consent-no" className="font-normal cursor-pointer">
+                <RadioGroupItem value="no" id="consent-no" className="border-white text-white" />
+                <Label htmlFor="consent-no" className="font-normal cursor-pointer text-gray-300">
                   아니오
                 </Label>
               </div>
@@ -147,7 +147,7 @@ export function ConsultationForm() {
 
           {/* 상호 */}
           <div className="space-y-2">
-            <Label htmlFor="companyName" className="text-base">
+            <Label htmlFor="companyName" className="text-base text-white">
               상호 <span className="text-destructive">*</span>
             </Label>
             <Input
@@ -158,12 +158,13 @@ export function ConsultationForm() {
               onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
               required
               disabled={isSubmitting}
+              className="bg-[#1C2333] border-[#3b4262] text-white placeholder:text-gray-500"
             />
           </div>
 
           {/* 성명 */}
           <div className="space-y-2">
-            <Label htmlFor="contactName" className="text-base">
+            <Label htmlFor="contactName" className="text-base text-white">
               성명 <span className="text-destructive">*</span>
             </Label>
             <Input
@@ -174,12 +175,13 @@ export function ConsultationForm() {
               onChange={(e) => setFormData({ ...formData, contactName: e.target.value })}
               required
               disabled={isSubmitting}
+              className="bg-[#1C2333] border-[#3b4262] text-white placeholder:text-gray-500"
             />
           </div>
 
           {/* 전화번호 */}
           <div className="space-y-2">
-            <Label htmlFor="phone" className="text-base">
+            <Label htmlFor="phone" className="text-base text-white">
               전화번호 <span className="text-destructive">*</span>
             </Label>
             <Input
@@ -190,12 +192,13 @@ export function ConsultationForm() {
               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
               required
               disabled={isSubmitting}
+              className="bg-[#1C2333] border-[#3b4262] text-white placeholder:text-gray-500"
             />
           </div>
 
           {/* 이메일 */}
           <div className="space-y-2">
-            <Label htmlFor="email" className="text-base">
+            <Label htmlFor="email" className="text-base text-white">
               이메일 <span className="text-destructive">*</span>
             </Label>
             <Input
@@ -206,13 +209,14 @@ export function ConsultationForm() {
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
               required
               disabled={isSubmitting}
+              className="bg-[#1C2333] border-[#3b4262] text-white placeholder:text-gray-500"
             />
           </div>
 
           {/* 제출 버튼 */}
           <Button
             type="submit"
-            className="w-full text-base h-12 font-semibold"
+            className="w-full text-base h-12 font-semibold bg-blue-600 hover:bg-blue-700 text-white"
             disabled={isSubmitting}
             onClick={handleFormClick}
           >
