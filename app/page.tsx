@@ -105,7 +105,7 @@ export default function Home() {
               <Card
                 padding="xl"
                 radius="md"
-                className="bg-[#1A1B1E] border-gray-700 hover:border-blue-500 transition-all duration-300 hover:-translate-y-1"
+                className="!bg-slate-900 border-gray-700 hover:border-blue-500 transition-all duration-300 hover:-translate-y-1"
                 withBorder
               >
                 <Stack gap="sm">
@@ -126,7 +126,7 @@ export default function Home() {
               <Card
                 padding="xl"
                 radius="md"
-                className="bg-[#1A1B1E] border-gray-700 hover:border-blue-500 transition-all duration-300 hover:-translate-y-1"
+                className="!bg-slate-900 border-gray-700 hover:border-blue-500 transition-all duration-300 hover:-translate-y-1"
                 withBorder
               >
                 <Stack gap="sm">
@@ -145,7 +145,7 @@ export default function Home() {
               <Card
                 padding="xl"
                 radius="md"
-                className="bg-[#1A1B1E] border-gray-700 hover:border-blue-500 transition-all duration-300 hover:-translate-y-1"
+                className="!bg-slate-900 border-gray-700 hover:border-blue-500 transition-all duration-300 hover:-translate-y-1"
                 withBorder
               >
                 <Stack gap="sm">
@@ -184,50 +184,50 @@ export default function Home() {
           </Stack>
 
           <SimpleGrid cols={{ base: 1, md: 3 }} spacing="xl" mb={96}>
-            <Card padding="xl" radius="md" withBorder className="bg-white hover:border-gray-400 transition-colors duration-300">
+            <Card padding="xl" radius="md" withBorder className="!bg-slate-900 border-gray-700 hover:border-gray-500 transition-colors duration-300">
               <Stack align="start" gap="md">
                 <Group gap="sm" align="center">
-                  <ThemeIcon size="lg" radius="md" color="gray" variant="light">
-                    <AlertCircle className="w-5 h-5" />
+                  <ThemeIcon size="lg" radius="md" color="gray" variant="light" className="bg-gray-800">
+                    <AlertCircle className="w-5 h-5 text-gray-300" />
                   </ThemeIcon>
-                  <Text fw={700} size="lg" c="gray.9">1. 블로그/검색광고의 한계</Text>
+                  <Text fw={700} size="lg" c="white">1. 블로그/검색광고의 한계</Text>
                 </Group>
                 <List spacing="sm" size="sm" center icon={<ThemeIcon color="gray" size={6} radius="xl" variant="filled"><span /></ThemeIcon>}>
-                  <List.Item>검색량은 많지만 실질적 자문 불가능</List.Item>
-                  <List.Item>상담 전 정보 부족으로 낮은 전환율</List.Item>
-                  <List.Item>치열한 경쟁으로 클릭 단가만 상승</List.Item>
+                  <List.Item className="text-gray-300">검색량은 많지만 실질적 자문 불가능</List.Item>
+                  <List.Item className="text-gray-300">상담 전 정보 부족으로 낮은 전환율</List.Item>
+                  <List.Item className="text-gray-300">치열한 경쟁으로 클릭 단가만 상승</List.Item>
                 </List>
               </Stack>
             </Card>
 
-            <Card padding="xl" radius="md" withBorder className="bg-white hover:border-gray-400 transition-colors duration-300">
+            <Card padding="xl" radius="md" withBorder className="!bg-slate-900 border-gray-700 hover:border-gray-500 transition-colors duration-300">
               <Stack align="start" gap="md">
                 <Group gap="sm" align="center">
-                  <ThemeIcon size="lg" radius="md" color="gray" variant="light">
-                    <Lock className="w-5 h-5" />
+                  <ThemeIcon size="lg" radius="md" color="gray" variant="light" className="bg-gray-800">
+                    <Lock className="w-5 h-5 text-gray-300" />
                   </ThemeIcon>
-                  <Text fw={700} size="lg" c="gray.9">2. 광고 규제 문제</Text>
+                  <Text fw={700} size="lg" c="white">2. 광고 규제 문제</Text>
                 </Group>
                 <List spacing="sm" size="sm" center icon={<ThemeIcon color="gray" size={6} radius="xl" variant="filled"><span /></ThemeIcon>}>
-                  <List.Item>"승소율", "최고" 등 표현 금지</List.Item>
-                  <List.Item>화려한 카피 불가로 광고 효율 한계</List.Item>
-                  <List.Item>변호사 직접 추천·선정 금지</List.Item>
+                  <List.Item className="text-gray-300">"승소율", "최고" 등 표현 금지</List.Item>
+                  <List.Item className="text-gray-300">화려한 카피 불가로 광고 효율 한계</List.Item>
+                  <List.Item className="text-gray-300">변호사 직접 추천·선정 금지</List.Item>
                 </List>
               </Stack>
             </Card>
 
-            <Card padding="xl" radius="md" withBorder className="bg-white hover:border-gray-400 transition-colors duration-300">
+            <Card padding="xl" radius="md" withBorder className="!bg-slate-900 border-gray-700 hover:border-gray-500 transition-colors duration-300">
               <Stack align="start" gap="md">
                 <Group gap="sm" align="center">
-                  <ThemeIcon size="lg" radius="md" color="gray" variant="light">
-                    <Clock className="w-5 h-5" />
+                  <ThemeIcon size="lg" radius="md" color="gray" variant="light" className="bg-gray-800">
+                    <Clock className="w-5 h-5 text-gray-300" />
                   </ThemeIcon>
-                  <Text fw={700} size="lg" c="gray.9">3. 상담 전 소모적 비용</Text>
+                  <Text fw={700} size="lg" c="white">3. 상담 전 소모적 비용</Text>
                 </Group>
                 <List spacing="sm" size="sm" center icon={<ThemeIcon color="gray" size={6} radius="xl" variant="filled"><span /></ThemeIcon>}>
-                  <List.Item>의뢰인의 낮은 사건 설명 능력</List.Item>
-                  <List.Item>사실관계 파악에 상담 시간 70% 소모</List.Item>
-                  <List.Item>단순 문의 폭증으로 응대 피로도 증가</List.Item>
+                  <List.Item className="text-gray-300">의뢰인의 낮은 사건 설명 능력</List.Item>
+                  <List.Item className="text-gray-300">사실관계 파악에 상담 시간 70% 소모</List.Item>
+                  <List.Item className="text-gray-300">단순 문의 폭증으로 응대 피로도 증가</List.Item>
                 </List>
               </Stack>
             </Card>
@@ -243,30 +243,30 @@ export default function Home() {
 
           <SimpleGrid cols={{ base: 1, md: 2 }} spacing="xl" mb={128}>
             {/* L1 Funnel */}
-            <Card padding="lg" radius="md" withBorder className="bg-white border-t-4 border-t-blue-600 shadow-sm hover:shadow-md transition-all duration-300">
-              <Card.Section withBorder inheritPadding py="xs" bg="gray.0">
+            <Card padding="lg" radius="md" withBorder className="!bg-slate-900 border-t-4 border-t-blue-600 shadow-sm hover:shadow-md transition-all duration-300 border-gray-700">
+              <Card.Section withBorder inheritPadding py="xs" className="bg-slate-800 border-gray-700">
                 <Group justify="space-between">
                   <Group gap="xs">
                     <ThemeIcon size="md" radius="sm" variant="filled" color="blue">
                       <Megaphone className="w-4 h-4" />
                     </ThemeIcon>
-                    <Text size="sm" fw={700} c="blue.9" tt="uppercase">Funnel 01</Text>
+                    <Text size="sm" fw={700} c="blue.2" tt="uppercase">Funnel 01</Text>
                   </Group>
                   <Badge variant="light" color="blue" size="sm">STEP 1</Badge>
                 </Group>
               </Card.Section>
 
               <Stack gap="md" mt="md">
-                <Title order={3} size="h3" fw={700}>익명 생활법률 AI</Title>
-                <Text size="sm" c="dimmed" lh={1.6}>
+                <Title order={3} size="h3" fw={700} c="white">익명 생활법률 AI</Title>
+                <Text size="sm" c="dimmed" lh={1.6} className="text-gray-300">
                   가벼운 대화로 시작하여 의뢰인의 심리적 장벽을 낮추고, 자연스럽게 신뢰를 형성합니다.
                 </Text>
 
-                <Card withBorder radius="sm" p="sm" bg="gray.0" className="border-dashed">
+                <Card withBorder radius="sm" p="sm" className="bg-slate-800 border-dashed border-gray-600">
                   <List spacing="xs" size="sm" icon={<ThemeIcon color="blue" size={16} radius="xl" variant="filled"><Zap size={10} /></ThemeIcon>}>
-                    <List.Item>AI 사건 유형 자동 분류 (회생, 형사, 이혼 등)</List.Item>
-                    <List.Item>필요한 자료 및 기본 체크리스트 제공</List.Item>
-                    <List.Item icon={<ThemeIcon color="green" size={16} radius="xl" variant="filled"><ShieldCheck size={10} /></ThemeIcon>}>
+                    <List.Item className="text-gray-300">AI 사건 유형 자동 분류 (회생, 형사, 이혼 등)</List.Item>
+                    <List.Item className="text-gray-300">필요한 자료 및 기본 체크리스트 제공</List.Item>
+                    <List.Item icon={<ThemeIcon color="green" size={16} radius="xl" variant="filled"><ShieldCheck size={10} /></ThemeIcon>} className="text-gray-300">
                       판단, 승소, 전략 미제공 (규제 완전 준수)
                     </List.Item>
                   </List>
@@ -275,30 +275,30 @@ export default function Home() {
             </Card>
 
             {/* L2 Funnel */}
-            <Card padding="lg" radius="md" withBorder className="bg-white border-t-4 border-t-indigo-700 shadow-sm hover:shadow-md transition-all duration-300">
-              <Card.Section withBorder inheritPadding py="xs" bg="gray.0">
+            <Card padding="lg" radius="md" withBorder className="!bg-slate-900 border-t-4 border-t-indigo-700 shadow-sm hover:shadow-md transition-all duration-300 border-gray-700">
+              <Card.Section withBorder inheritPadding py="xs" className="bg-slate-800 border-gray-700">
                 <Group justify="space-between">
                   <Group gap="xs">
                     <ThemeIcon size="md" radius="sm" variant="filled" color="indigo">
                       <ShieldCheck className="w-4 h-4" />
                     </ThemeIcon>
-                    <Text size="sm" fw={700} c="indigo.9" tt="uppercase">Funnel 02</Text>
+                    <Text size="sm" fw={700} c="indigo.2" tt="uppercase">Funnel 02</Text>
                   </Group>
                   <Badge variant="light" color="indigo" size="sm">STEP 2</Badge>
                 </Group>
               </Card.Section>
 
               <Stack gap="md" mt="md">
-                <Title order={3} size="h3" fw={700}>사건정리 AI</Title>
-                <Text size="sm" c="dimmed" lh={1.6}>
+                <Title order={3} size="h3" fw={700} c="white">사건정리 AI</Title>
+                <Text size="sm" c="dimmed" lh={1.6} className="text-gray-300">
                   확보된 신뢰를 바탕으로 구체적인 사실관계를 파악하고, 상담 가능한 형태로 구조화합니다.
                 </Text>
 
-                <Card withBorder radius="sm" p="sm" bg="gray.0" className="border-dashed">
+                <Card withBorder radius="sm" p="sm" className="bg-slate-800 border-dashed border-gray-600">
                   <List spacing="xs" size="sm" icon={<ThemeIcon color="indigo" size={16} radius="xl" variant="filled"><Zap size={10} /></ThemeIcon>}>
-                    <List.Item>AI가 사실관계를 JSON 구조화하여 정리</List.Item>
-                    <List.Item>"정리된 사건 개요" 및 타임라인 자동 생성</List.Item>
-                    <List.Item icon={<ThemeIcon color="green" size={16} radius="xl" variant="filled"><ShieldCheck size={10} /></ThemeIcon>}>
+                    <List.Item className="text-gray-300">AI가 사실관계를 JSON 구조화하여 정리</List.Item>
+                    <List.Item className="text-gray-300">"정리된 사건 개요" 및 타임라인 자동 생성</List.Item>
+                    <List.Item icon={<ThemeIcon color="green" size={16} radius="xl" variant="filled"><ShieldCheck size={10} /></ThemeIcon>} className="text-gray-300">
                       사무실 단일 CRM으로 전달 (변호사법 준수)
                     </List.Item>
                   </List>
@@ -319,7 +319,7 @@ export default function Home() {
             </Stack>
 
             <SimpleGrid cols={{ base: 1, md: 3 }} spacing="xl" className="relative z-10">
-              <Card padding="xl" radius="md" className="bg-[#1A1B1E] border-gray-700 hover:border-blue-500 transition-all duration-300" withBorder>
+              <Card padding="xl" radius="md" className="!bg-slate-900 border-gray-700 hover:border-blue-500 transition-all duration-300" withBorder>
                 <Stack gap="md">
                   <Group>
                     <ThemeIcon color="red" variant="light" size="xl" radius="md" className="bg-red-900/30 text-red-200">
@@ -332,7 +332,7 @@ export default function Home() {
                   </Text>
                 </Stack>
               </Card>
-              <Card padding="xl" radius="md" className="bg-[#1A1B1E] border-gray-700 hover:border-blue-500 transition-all duration-300" withBorder>
+              <Card padding="xl" radius="md" className="!bg-slate-900 border-gray-700 hover:border-blue-500 transition-all duration-300" withBorder>
                 <Stack gap="md">
                   <Group>
                     <ThemeIcon color="blue" variant="light" size="xl" radius="md" className="bg-blue-900/30 text-blue-200">
@@ -345,7 +345,7 @@ export default function Home() {
                   </Text>
                 </Stack>
               </Card>
-              <Card padding="xl" radius="md" className="bg-[#1A1B1E] border-gray-700 hover:border-blue-500 transition-all duration-300" withBorder>
+              <Card padding="xl" radius="md" className="!bg-slate-900 border-gray-700 hover:border-blue-500 transition-all duration-300" withBorder>
                 <Stack gap="md">
                   <Group>
                     <ThemeIcon color="yellow" variant="light" size="xl" radius="md" className="bg-yellow-900/30 text-yellow-200">
