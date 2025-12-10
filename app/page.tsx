@@ -54,7 +54,7 @@ export default function Home() {
           >
             <source src="/2.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-black/60" />
+          <div className="absolute inset-0 bg-black/30" />
         </div>
 
         <Container size="xl" className="relative z-10 py-20 md:py-32 text-white">
@@ -105,9 +105,8 @@ export default function Home() {
               <Card
                 padding="xl"
                 radius="md"
-                bg="transparent"
-                className="bg-white/5 backdrop-blur-md border-white/10 hover:bg-white/10 transition-all duration-300 hover:-translate-y-1"
-                style={{ border: '1px solid rgba(255, 255, 255, 0.1)' }}
+                className="bg-black/40 backdrop-blur-md border-white/20 hover:bg-black/50 transition-all duration-300 hover:-translate-y-1"
+                style={{ border: '1px solid rgba(255, 255, 255, 0.2)' }}
               >
                 <Stack gap="sm">
                   <Group gap="xs" className="text-white">
@@ -127,9 +126,8 @@ export default function Home() {
               <Card
                 padding="xl"
                 radius="md"
-                bg="transparent"
-                className="bg-white/5 backdrop-blur-md border-white/10 hover:bg-white/10 transition-all duration-300 hover:-translate-y-1"
-                style={{ border: '1px solid rgba(255, 255, 255, 0.1)' }}
+                className="bg-black/40 backdrop-blur-md border-white/20 hover:bg-black/50 transition-all duration-300 hover:-translate-y-1"
+                style={{ border: '1px solid rgba(255, 255, 255, 0.2)' }}
               >
                 <Stack gap="sm">
                   <Group gap="xs" className="text-white">
@@ -147,9 +145,8 @@ export default function Home() {
               <Card
                 padding="xl"
                 radius="md"
-                bg="transparent"
-                className="bg-white/5 backdrop-blur-md border-white/10 hover:bg-white/10 transition-all duration-300 hover:-translate-y-1"
-                style={{ border: '1px solid rgba(255, 255, 255, 0.1)' }}
+                className="bg-black/40 backdrop-blur-md border-white/20 hover:bg-black/50 transition-all duration-300 hover:-translate-y-1"
+                style={{ border: '1px solid rgba(255, 255, 255, 0.2)' }}
               >
                 <Stack gap="sm">
                   <Group gap="xs" className="text-white">
@@ -322,7 +319,7 @@ export default function Home() {
             </Stack>
 
             <SimpleGrid cols={{ base: 1, md: 3 }} spacing="xl" className="relative z-10">
-              <Card padding="xl" radius="md" bg="transparent" className="bg-white/10 backdrop-blur-md border-white/10 hover:bg-white/20 transition-all duration-300">
+              <Card padding="xl" radius="md" className="bg-white/10 backdrop-blur-md border-white/20 hover:bg-white/20 transition-all duration-300" style={{ border: '1px solid rgba(255, 255, 255, 0.2)' }}>
                 <Stack gap="md">
                   <Group>
                     <ThemeIcon color="red" variant="light" size="xl" radius="md" className="bg-red-500/20 text-red-200">
@@ -335,7 +332,7 @@ export default function Home() {
                   </Text>
                 </Stack>
               </Card>
-              <Card padding="xl" radius="md" bg="transparent" className="bg-white/10 backdrop-blur-md border-white/10 hover:bg-white/20 transition-all duration-300">
+              <Card padding="xl" radius="md" className="bg-white/10 backdrop-blur-md border-white/20 hover:bg-white/20 transition-all duration-300" style={{ border: '1px solid rgba(255, 255, 255, 0.2)' }}>
                 <Stack gap="md">
                   <Group>
                     <ThemeIcon color="blue" variant="light" size="xl" radius="md" className="bg-blue-500/20 text-blue-200">
@@ -348,7 +345,7 @@ export default function Home() {
                   </Text>
                 </Stack>
               </Card>
-              <Card padding="xl" radius="md" bg="transparent" className="bg-white/10 backdrop-blur-md border-white/10 hover:bg-white/20 transition-all duration-300">
+              <Card padding="xl" radius="md" className="bg-white/10 backdrop-blur-md border-white/20 hover:bg-white/20 transition-all duration-300" style={{ border: '1px solid rgba(255, 255, 255, 0.2)' }}>
                 <Stack gap="md">
                   <Group>
                     <ThemeIcon color="yellow" variant="light" size="xl" radius="md" className="bg-yellow-500/20 text-yellow-200">
