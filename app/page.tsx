@@ -461,17 +461,38 @@ export default function Home() {
             <Text size="lg" c="dimmed">LLM 기반 이중퍼널 시스템을 영상으로 확인하세요</Text>
           </Stack>
 
-          <Card radius="xl" shadow="xl" padding={0} bg="black" style={{ overflow: 'hidden' }}>
-            <AspectRatio ratio={16 / 9}>
-              <iframe
-                src="https://www.youtube.com/embed/HPJx65CpVTI"
-                title="LLM 기반 이중퍼널 병원 마케팅 솔루션"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                style={{ border: 0 }}
-              />
-            </AspectRatio>
-          </Card>
+          <div className="relative bg-[#111] rounded-xl overflow-hidden shadow-2xl border border-gray-800 max-w-4xl mx-auto">
+            {/* Top Film Strip Perforations */}
+            <div className="h-6 w-full bg-[#000] border-b border-gray-800 flex items-center">
+              <div className="w-full h-3 opacity-30" style={{
+                backgroundImage: 'linear-gradient(to right, transparent 50%, #ffffff 50%)',
+                backgroundSize: '24px 100%'
+              }} />
+            </div>
+
+            {/* Video Area */}
+            <div className="bg-black">
+              <Card radius="none" shadow="none" padding={0} bg="black" style={{ overflow: 'hidden' }}>
+                <AspectRatio ratio={16 / 9}>
+                  <iframe
+                    src="https://www.youtube.com/embed/HPJx65CpVTI"
+                    title="LLM 기반 이중퍼널 병원 마케팅 솔루션"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                    style={{ border: 0 }}
+                  />
+                </AspectRatio>
+              </Card>
+            </div>
+
+            {/* Bottom Film Strip Perforations */}
+            <div className="h-6 w-full bg-[#000] border-t border-gray-800 flex items-center">
+              <div className="w-full h-3 opacity-30" style={{
+                backgroundImage: 'linear-gradient(to right, transparent 50%, #ffffff 50%)',
+                backgroundSize: '24px 100%'
+              }} />
+            </div>
+          </div>
         </Container>
       </section>
 
