@@ -105,7 +105,7 @@ export default function Home() {
               <Card
                 padding="xl"
                 radius="md"
-                className="!bg-slate-900 border-gray-700 hover:border-blue-500 transition-all duration-300 hover:-translate-y-1"
+                className="!bg-[#151932] border-[#3b4262] hover:border-blue-500 transition-all duration-300 hover:-translate-y-1"
                 withBorder
               >
                 <Stack gap="sm">
@@ -126,7 +126,7 @@ export default function Home() {
               <Card
                 padding="xl"
                 radius="md"
-                className="!bg-slate-900 border-gray-700 hover:border-blue-500 transition-all duration-300 hover:-translate-y-1"
+                className="!bg-[#151932] border-[#3b4262] hover:border-blue-500 transition-all duration-300 hover:-translate-y-1"
                 withBorder
               >
                 <Stack gap="sm">
@@ -145,7 +145,7 @@ export default function Home() {
               <Card
                 padding="xl"
                 radius="md"
-                className="!bg-slate-900 border-gray-700 hover:border-blue-500 transition-all duration-300 hover:-translate-y-1"
+                className="!bg-[#151932] border-[#3b4262] hover:border-blue-500 transition-all duration-300 hover:-translate-y-1"
                 withBorder
               >
                 <Stack gap="sm">
@@ -184,7 +184,7 @@ export default function Home() {
           </Stack>
 
           <SimpleGrid cols={{ base: 1, md: 3 }} spacing="xl" mb={96}>
-            <Card padding="xl" radius="md" withBorder className="!bg-slate-900 border-gray-700 hover:border-gray-500 transition-colors duration-300">
+            <Card padding="xl" radius="md" withBorder className="!bg-[#151932] border-[#3b4262] hover:border-blue-500 transition-colors duration-300">
               <Stack align="start" gap="md">
                 <Group gap="sm" align="center">
                   <ThemeIcon size="lg" radius="md" color="gray" variant="light" className="bg-gray-800">
@@ -200,7 +200,7 @@ export default function Home() {
               </Stack>
             </Card>
 
-            <Card padding="xl" radius="md" withBorder className="!bg-slate-900 border-gray-700 hover:border-gray-500 transition-colors duration-300">
+            <Card padding="xl" radius="md" withBorder className="!bg-[#151932] border-[#3b4262] hover:border-blue-500 transition-colors duration-300">
               <Stack align="start" gap="md">
                 <Group gap="sm" align="center">
                   <ThemeIcon size="lg" radius="md" color="gray" variant="light" className="bg-gray-800">
@@ -216,7 +216,7 @@ export default function Home() {
               </Stack>
             </Card>
 
-            <Card padding="xl" radius="md" withBorder className="!bg-slate-900 border-gray-700 hover:border-gray-500 transition-colors duration-300">
+            <Card padding="xl" radius="md" withBorder className="!bg-[#151932] border-[#3b4262] hover:border-blue-500 transition-colors duration-300">
               <Stack align="start" gap="md">
                 <Group gap="sm" align="center">
                   <ThemeIcon size="lg" radius="md" color="gray" variant="light" className="bg-gray-800">
@@ -243,8 +243,8 @@ export default function Home() {
 
           <SimpleGrid cols={{ base: 1, md: 2 }} spacing="xl" mb={128}>
             {/* L1 Funnel */}
-            <Card padding="lg" radius="md" withBorder className="!bg-slate-900 border-t-4 border-t-blue-600 shadow-sm hover:shadow-md transition-all duration-300 border-gray-700">
-              <Card.Section withBorder inheritPadding py="xs" className="bg-slate-800 border-gray-700">
+            <Card padding="lg" radius="md" withBorder className="!bg-[#151932] border-t-4 border-t-blue-600 shadow-sm hover:shadow-md transition-all duration-300 border-[#3b4262]">
+              <Card.Section withBorder inheritPadding py="xs" className="bg-[#1C2333] border-[#3b4262]">
                 <Group justify="space-between">
                   <Group gap="xs">
                     <ThemeIcon size="md" radius="sm" variant="filled" color="blue">
@@ -262,7 +262,7 @@ export default function Home() {
                   가벼운 대화로 시작하여 의뢰인의 심리적 장벽을 낮추고, 자연스럽게 신뢰를 형성합니다.
                 </Text>
 
-                <Card withBorder radius="sm" p="sm" className="bg-slate-800 border-dashed border-gray-600">
+                <Card withBorder radius="sm" p="sm" className="bg-[#1C2333] border-dashed border-[#3b4262]">
                   <List spacing="xs" size="sm" icon={<ThemeIcon color="blue" size={16} radius="xl" variant="filled"><Zap size={10} /></ThemeIcon>}>
                     <List.Item className="text-gray-300">AI 사건 유형 자동 분류 (회생, 형사, 이혼 등)</List.Item>
                     <List.Item className="text-gray-300">필요한 자료 및 기본 체크리스트 제공</List.Item>
@@ -275,8 +275,8 @@ export default function Home() {
             </Card>
 
             {/* L2 Funnel */}
-            <Card padding="lg" radius="md" withBorder className="!bg-slate-900 border-t-4 border-t-indigo-700 shadow-sm hover:shadow-md transition-all duration-300 border-gray-700">
-              <Card.Section withBorder inheritPadding py="xs" className="bg-slate-800 border-gray-700">
+            <Card padding="lg" radius="md" withBorder className="!bg-[#151932] border-t-4 border-t-indigo-700 shadow-sm hover:shadow-md transition-all duration-300 border-[#3b4262]">
+              <Card.Section withBorder inheritPadding py="xs" className="bg-[#1C2333] border-[#3b4262]">
                 <Group justify="space-between">
                   <Group gap="xs">
                     <ThemeIcon size="md" radius="sm" variant="filled" color="indigo">
@@ -294,7 +294,7 @@ export default function Home() {
                   확보된 신뢰를 바탕으로 구체적인 사실관계를 파악하고, 상담 가능한 형태로 구조화합니다.
                 </Text>
 
-                <Card withBorder radius="sm" p="sm" className="bg-slate-800 border-dashed border-gray-600">
+                <Card withBorder radius="sm" p="sm" className="bg-[#1C2333] border-dashed border-[#3b4262]">
                   <List spacing="xs" size="sm" icon={<ThemeIcon color="indigo" size={16} radius="xl" variant="filled"><Zap size={10} /></ThemeIcon>}>
                     <List.Item className="text-gray-300">AI가 사실관계를 JSON 구조화하여 정리</List.Item>
                     <List.Item className="text-gray-300">"정리된 사건 개요" 및 타임라인 자동 생성</List.Item>
@@ -319,7 +319,7 @@ export default function Home() {
             </Stack>
 
             <SimpleGrid cols={{ base: 1, md: 3 }} spacing="xl" className="relative z-10">
-              <Card padding="xl" radius="md" className="!bg-slate-900 border-gray-700 hover:border-blue-500 transition-all duration-300" withBorder>
+              <Card padding="xl" radius="md" className="!bg-[#151932] border-[#3b4262] hover:border-blue-500 transition-all duration-300" withBorder>
                 <Stack gap="md">
                   <Group>
                     <ThemeIcon color="red" variant="light" size="xl" radius="md" className="bg-red-900/30 text-red-200">
@@ -332,7 +332,7 @@ export default function Home() {
                   </Text>
                 </Stack>
               </Card>
-              <Card padding="xl" radius="md" className="!bg-slate-900 border-gray-700 hover:border-blue-500 transition-all duration-300" withBorder>
+              <Card padding="xl" radius="md" className="!bg-[#151932] border-[#3b4262] hover:border-blue-500 transition-all duration-300" withBorder>
                 <Stack gap="md">
                   <Group>
                     <ThemeIcon color="blue" variant="light" size="xl" radius="md" className="bg-blue-900/30 text-blue-200">
@@ -345,7 +345,7 @@ export default function Home() {
                   </Text>
                 </Stack>
               </Card>
-              <Card padding="xl" radius="md" className="!bg-slate-900 border-gray-700 hover:border-blue-500 transition-all duration-300" withBorder>
+              <Card padding="xl" radius="md" className="!bg-[#151932] border-[#3b4262] hover:border-blue-500 transition-all duration-300" withBorder>
                 <Stack gap="md">
                   <Group>
                     <ThemeIcon color="yellow" variant="light" size="xl" radius="md" className="bg-yellow-900/30 text-yellow-200">
