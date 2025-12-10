@@ -3,7 +3,10 @@ import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import Script from "next/script"
+import { ColorSchemeScript, MantineProvider } from "@mantine/core"
+import { theme } from "./theme"
 import "./globals.css"
+import "@mantine/core/styles.css"
 
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
@@ -22,6 +25,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <head>
+        <ColorSchemeScript />
         <Script src="https://www.googletagmanager.com/gtag/js?id=AW-16980195675" strategy="afterInteractive" />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
@@ -63,7 +67,9 @@ export default function RootLayout({
         </noscript>
       </head>
       <body className={`font-sans antialiased`}>
-        {children}
+        <MantineProvider theme={theme}>
+          {children}
+        </MantineProvider>
         <Analytics />
       </body>
     </html>
