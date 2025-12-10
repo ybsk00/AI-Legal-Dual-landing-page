@@ -1,4 +1,5 @@
 import type React from "react"
+import { Suspense } from "react"
 import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
@@ -42,7 +43,9 @@ export default function RootLayout({
       </head>
       <body className={`font-sans antialiased !bg-[#0B0D14] !text-white`}>
         <MetaPixel />
-        <MetaPixelEvents />
+        <Suspense fallback={null}>
+          <MetaPixelEvents />
+        </Suspense>
         <MantineProvider theme={theme}>
           {children}
         </MantineProvider>
