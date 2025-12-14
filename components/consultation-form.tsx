@@ -86,8 +86,8 @@ export function ConsultationForm() {
           userAgent: navigator.userAgent,
           email: formData.email,
           phone: formData.phone,
-          fbp: getMetaBrowserId(),
-          fbc: getMetaClickId(),
+          fbp: getMetaBrowserId() ?? undefined,
+          fbc: getMetaClickId() ?? undefined,
         })
         console.log("[v0] Meta Conversions API Lead event sent")
       } catch (conversionError) {

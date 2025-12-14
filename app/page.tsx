@@ -1,22 +1,38 @@
 "use client"
 
 import { ConsultationForm } from "@/components/consultation-form"
-import { GeminiChat } from "@/components/gemini-chat"
+import { WireframeMesh } from "@/components/WireframeMesh"
+import { GlassCard, GlassButton, SectionTitle } from "@/components/GlassCard"
 import {
+  Search,
+  FileText,
+  Bot,
   TrendingUp,
+  Clock,
+  Scale,
+  MessageCircle,
+  Shield,
   Target,
   Zap,
-  Lock,
-  AlertCircle,
+  CheckCircle,
+  XCircle,
+  ArrowRight,
   Users,
-  Megaphone,
-  RepeatIcon,
-  ShieldCheck,
-  Clock,
+  Briefcase,
+  FileCheck,
+  Filter,
+  Lightbulb,
+  Gem,
+  Sparkles,
+  Timer,
+  FolderOpen,
+  CalendarCheck,
+  AlertCircle,
+  Phone,
+  Mail,
 } from "lucide-react"
 import { useEffect } from "react"
 import { sendMetaConversionEvent, getMetaBrowserId, getMetaClickId } from "@/lib/meta-conversion"
-import { Container, Title, Text, Button, Badge, SimpleGrid, Card, ThemeIcon, Stack, Group, List, AspectRatio, Image } from "@mantine/core"
 
 export default function Home() {
   useEffect(() => {
@@ -38,502 +54,693 @@ export default function Home() {
     sendViewContentEvent()
   }, [])
 
+  const scrollToForm = () => {
+    document.getElementById("consultation-form")?.scrollIntoView({ behavior: "smooth" })
+  }
+
   return (
-    <main className="min-h-screen bg-background">
-      {/* Hero Section */}
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden border-b">
-        {/* Video Background */}
-        <div className="absolute inset-0 z-0">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-cover"
-          >
-            <source src="/2.mp4" type="video/mp4" />
-          </video>
-          <div className="absolute inset-0 bg-black/30" />
-        </div>
+    <main className="min-h-screen relative">
+      {/* 3D Wireframe Mesh Background */}
+      <WireframeMesh />
 
-        <Container size="xl" className="relative z-10 py-20 md:py-32 text-white">
-          <Stack align="center" gap="xl" className="text-center max-w-5xl mx-auto">
-            <Badge
-              size="xl"
-              variant="gradient"
-              gradient={{ from: 'indigo', to: 'cyan' }}
-              className="px-6 py-4 text-lg font-medium backdrop-blur-sm"
-            >
-              <Group gap="xs">
-                <Zap className="w-5 h-5" />
-                <span>AI 시대 로펌 마케팅 전환</span>
-              </Group>
-            </Badge>
+      {/* Content */}
+      <div className="relative z-10">
+        {/* Hero Section */}
+        <section className="min-h-screen flex items-center justify-center px-4 py-20">
+          <div className="max-w-6xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 text-sm font-medium text-blue-400 bg-blue-500/10 border border-blue-500/20 rounded-full backdrop-blur-sm animate-fade-in-up">
+              <Zap className="w-4 h-4" />
+              <span>AI 시대 로펌 마케팅 전환</span>
+            </div>
 
-            <Title order={1} className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-balance leading-tight py-2 drop-shadow-lg break-keep text-white">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight animate-fade-in-up break-keep" style={{ animationDelay: "0.1s" }}>
               사람들은 이제 검색이 아니라
               <br />
-              <Text span inherit variant="gradient" gradient={{ from: 'blue.2', to: 'cyan.2' }}>AI에게 먼저 묻고</Text> 변호사를 고릅니다
-            </Title>
+              <span className="text-gradient">AI에게 먼저 묻고</span> 변호사를 고릅니다
+            </h1>
 
-            <Text size="xl" className="text-white/90 text-balance max-w-3xl mx-auto leading-relaxed drop-shadow-md break-keep">
+            <p className="text-lg md:text-xl text-gray-400 mb-10 max-w-3xl mx-auto leading-relaxed animate-fade-in-up break-keep" style={{ animationDelay: "0.2s" }}>
               블로그·지식인 중심 마케팅은 끝났습니다.
               <br />
-              “AI에게 먼저 물어보는” 이 대화를
+              "AI에게 먼저 물어보는" 이 대화를
               <br />
               우리 로펌 전용 AI 퍼널로 가져오는 시스템입니다.
-            </Text>
+            </p>
 
-            <Stack align="center" gap="md" pt="md">
-              <Button
-                size="xl"
-                radius="xl"
-                variant="gradient"
-                gradient={{ from: 'blue', to: 'cyan' }}
-                onClick={() => document.getElementById('consultation-form')?.scrollIntoView({ behavior: 'smooth' })}
-                className="px-8 h-16 text-lg font-bold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all"
-              >
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+              <GlassButton size="xl" onClick={scrollToForm} className="w-full sm:w-auto">
                 무료 컨설팅 신청하기
-              </Button>
-              <Text size="sm" className="font-medium text-white/80 drop-shadow-sm break-keep">
+              </GlassButton>
+              <p className="text-sm text-gray-500">
                 AI가 먼저 신뢰를 만들고, 로펌은 정리된 사건만 상담합니다.
-              </Text>
-            </Stack>
-
-            <SimpleGrid cols={{ base: 1, md: 3 }} spacing="lg" className="pt-12 w-full text-left">
-              <Card
-                padding="xl"
-                radius="md"
-                className="!bg-[#151932] border-[#3b4262] hover:border-blue-500 transition-all duration-300 hover:-translate-y-1"
-                withBorder
-              >
-                <Stack gap="sm">
-                  <Group gap="xs">
-                    <ThemeIcon variant="light" color="blue" radius="xl" size="lg" className="bg-blue-900/30">
-                      <TrendingUp className="w-5 h-5" />
-                    </ThemeIcon>
-                    <Text fw={600} size="lg" c="white" style={{ letterSpacing: '-0.02em' }}>변화된 사용자 행동</Text>
-                  </Group>
-                  <Text size="sm" c="dimmed" className="text-gray-300 break-keep leading-relaxed">
-                    검색 → AI 대화 → 변호사 선택
-                    <br />
-                    이미 사용자 행동은 이렇게 바뀌었습니다.
-                  </Text>
-                </Stack>
-              </Card>
-
-              <Card
-                padding="xl"
-                radius="md"
-                className="!bg-[#151932] border-[#3b4262] hover:border-blue-500 transition-all duration-300 hover:-translate-y-1"
-                withBorder
-              >
-                <Stack gap="sm">
-                  <Group gap="xs">
-                    <ThemeIcon variant="light" color="blue" radius="xl" size="lg" className="bg-blue-900/30">
-                      <Target className="w-5 h-5" />
-                    </ThemeIcon>
-                    <Text fw={600} size="lg" c="white" style={{ letterSpacing: '-0.02em' }}>로펌 전용 AI의 역할</Text>
-                  </Group>
-                  <Text size="sm" c="dimmed" className="text-gray-300 break-keep leading-relaxed">
-                    AI가 의뢰인의 말을 듣고, 정보를 정리하고, 신뢰를 만듭니다. 이 역할을 플랫폼이 아닌 우리 로펌의 AI가 해야 합니다.
-                  </Text>
-                </Stack>
-              </Card>
-
-              <Card
-                padding="xl"
-                radius="md"
-                className="!bg-[#151932] border-[#3b4262] hover:border-blue-500 transition-all duration-300 hover:-translate-y-1"
-                withBorder
-              >
-                <Stack gap="sm">
-                  <Group gap="xs">
-                    <ThemeIcon variant="light" color="blue" radius="xl" size="lg" className="bg-blue-900/30">
-                      <Zap className="w-5 h-5" />
-                    </ThemeIcon>
-                    <Text fw={600} size="lg" c="white" style={{ letterSpacing: '-0.02em' }}>AI 법률 2중 퍼널</Text>
-                  </Group>
-                  <Text size="sm" c="dimmed" className="text-gray-300 break-keep leading-relaxed">
-                    익명 상담 AI로 유입을 모으고,
-                    <br />
-                    로그인 사건정리 AI로 상담·수임까지 자동 연결합니다.
-                  </Text>
-                </Stack>
-              </Card>
-            </SimpleGrid>
-          </Stack>
-        </Container>
-      </section>
-
-      {/* Problem Section */}
-      <section className="py-24 md:py-32 bg-transparent">
-        <Container size="xl">
-          <Stack align="center" gap="xl" mb={64} className="text-center">
-            <Title order={2} className="text-3xl md:text-4xl font-bold break-keep" c="white">
-              블로그·검색광고만으로는
-              <br />
-              이제 고가치 사건이 모이지 않습니다
-            </Title>
-            <Text size="xl" c="dimmed" className="max-w-3xl mx-auto break-keep text-gray-300">
-              의뢰인은 글을 읽지 않고, AI에게 자신의 사정을 털어놓습니다.
-              <br />
-              그런데 그 대화의 주인공은 우리 로펌이 아니라 남의 AI입니다.
-            </Text>
-          </Stack>
-
-          <SimpleGrid cols={{ base: 1, md: 3 }} spacing="xl" mb={96}>
-            <Card padding="xl" radius="md" withBorder className="!bg-[#151932] border-[#3b4262] hover:border-blue-500 transition-colors duration-300">
-              <Stack align="start" gap="md">
-                <Group gap="sm" align="center">
-                  <ThemeIcon size="lg" radius="md" color="gray" variant="light" className="bg-gray-800">
-                    <AlertCircle className="w-5 h-5 text-gray-300" />
-                  </ThemeIcon>
-                  <Text fw={700} size="lg" c="white">1. 블로그/검색광고의 한계</Text>
-                </Group>
-                <List spacing="sm" size="sm" center icon={<ThemeIcon color="gray" size={6} radius="xl" variant="filled"><span /></ThemeIcon>}>
-                  <List.Item className="text-gray-300">검색량은 많지만 실질적 자문 불가능</List.Item>
-                  <List.Item className="text-gray-300">상담 전 정보 부족으로 낮은 전환율</List.Item>
-                  <List.Item className="text-gray-300">치열한 경쟁으로 클릭 단가만 상승</List.Item>
-                </List>
-              </Stack>
-            </Card>
-
-            <Card padding="xl" radius="md" withBorder className="!bg-[#151932] border-[#3b4262] hover:border-blue-500 transition-colors duration-300">
-              <Stack align="start" gap="md">
-                <Group gap="sm" align="center">
-                  <ThemeIcon size="lg" radius="md" color="gray" variant="light" className="bg-gray-800">
-                    <Lock className="w-5 h-5 text-gray-300" />
-                  </ThemeIcon>
-                  <Text fw={700} size="lg" c="white">2. 광고 규제 문제</Text>
-                </Group>
-                <List spacing="sm" size="sm" center icon={<ThemeIcon color="gray" size={6} radius="xl" variant="filled"><span /></ThemeIcon>}>
-                  <List.Item className="text-gray-300">"승소율", "최고" 등 표현 금지</List.Item>
-                  <List.Item className="text-gray-300">화려한 카피 불가로 광고 효율 한계</List.Item>
-                  <List.Item className="text-gray-300">변호사 직접 추천·선정 금지</List.Item>
-                </List>
-              </Stack>
-            </Card>
-
-            <Card padding="xl" radius="md" withBorder className="!bg-[#151932] border-[#3b4262] hover:border-blue-500 transition-colors duration-300">
-              <Stack align="start" gap="md">
-                <Group gap="sm" align="center">
-                  <ThemeIcon size="lg" radius="md" color="gray" variant="light" className="bg-gray-800">
-                    <Clock className="w-5 h-5 text-gray-300" />
-                  </ThemeIcon>
-                  <Text fw={700} size="lg" c="white">3. 상담 전 소모적 비용</Text>
-                </Group>
-                <List spacing="sm" size="sm" center icon={<ThemeIcon color="gray" size={6} radius="xl" variant="filled"><span /></ThemeIcon>}>
-                  <List.Item className="text-gray-300">의뢰인의 낮은 사건 설명 능력</List.Item>
-                  <List.Item className="text-gray-300">사실관계 파악에 상담 시간 70% 소모</List.Item>
-                  <List.Item className="text-gray-300">단순 문의 폭증으로 응대 피로도 증가</List.Item>
-                </List>
-              </Stack>
-            </Card>
-          </SimpleGrid>
-
-          {/* Solution Section - AI Dual Funnel */}
-          <Stack align="center" gap="xl" mb={64} className="text-center">
-
-            <Text size="lg" c="dimmed" className="max-w-3xl mx-auto font-medium break-keep">
-              AI가 먼저 듣고 정리하고 넘겨주는, 로펌 전용 2단계 퍼널입니다.
-            </Text>
-          </Stack>
-
-          <SimpleGrid cols={{ base: 1, md: 2 }} spacing="xl" mb={128}>
-            {/* L1 Funnel */}
-            <Card padding="lg" radius="md" withBorder className="!bg-[#151932] border-t-4 border-t-blue-600 shadow-sm hover:shadow-md transition-all duration-300 border-[#3b4262]">
-              <Card.Section withBorder inheritPadding py="xs" className="bg-[#1C2333] border-[#3b4262]">
-                <Group justify="space-between">
-                  <Group gap="xs">
-                    <ThemeIcon size="md" radius="sm" variant="filled" color="blue">
-                      <Megaphone className="w-4 h-4" />
-                    </ThemeIcon>
-                    <Text size="sm" fw={700} c="blue.2" tt="uppercase">Funnel 01</Text>
-                  </Group>
-                  <Badge variant="light" color="blue" size="sm">STEP 1</Badge>
-                </Group>
-              </Card.Section>
-
-              <Stack gap="md" mt="md">
-                <Title order={3} size="h3" fw={700} c="white">익명 생활법률 AI</Title>
-                <Text size="sm" c="dimmed" lh={1.6} className="text-gray-300">
-                  가벼운 대화로 시작하여 의뢰인의 심리적 장벽을 낮추고, 자연스럽게 신뢰를 형성합니다.
-                </Text>
-
-                <Card withBorder radius="sm" p="sm" className="!bg-[#1C2333] border-dashed border-[#3b4262]">
-                  <List spacing="xs" size="sm" icon={<ThemeIcon color="blue" size={16} radius="xl" variant="filled"><Zap size={10} /></ThemeIcon>}>
-                    <List.Item className="text-gray-300">AI 사건 유형 자동 분류 (회생, 형사, 이혼 등)</List.Item>
-                    <List.Item className="text-gray-300">필요한 자료 및 기본 체크리스트 제공</List.Item>
-                    <List.Item icon={<ThemeIcon color="green" size={16} radius="xl" variant="filled"><ShieldCheck size={10} /></ThemeIcon>} className="text-gray-300">
-                      판단, 승소, 전략 미제공 (규제 완전 준수)
-                    </List.Item>
-                  </List>
-                </Card>
-              </Stack>
-            </Card>
-
-            {/* L2 Funnel */}
-            <Card padding="lg" radius="md" withBorder className="!bg-[#151932] border-t-4 border-t-indigo-700 shadow-sm hover:shadow-md transition-all duration-300 border-[#3b4262]">
-              <Card.Section withBorder inheritPadding py="xs" className="bg-[#1C2333] border-[#3b4262]">
-                <Group justify="space-between">
-                  <Group gap="xs">
-                    <ThemeIcon size="md" radius="sm" variant="filled" color="indigo">
-                      <ShieldCheck className="w-4 h-4" />
-                    </ThemeIcon>
-                    <Text size="sm" fw={700} c="indigo.2" tt="uppercase">Funnel 02</Text>
-                  </Group>
-                  <Badge variant="light" color="indigo" size="sm">STEP 2</Badge>
-                </Group>
-              </Card.Section>
-
-              <Stack gap="md" mt="md">
-                <Title order={3} size="h3" fw={700} c="white">사건정리 AI</Title>
-                <Text size="sm" c="dimmed" lh={1.6} className="text-gray-300">
-                  확보된 신뢰를 바탕으로 구체적인 사실관계를 파악하고, 상담 가능한 형태로 구조화합니다.
-                </Text>
-
-                <Card withBorder radius="sm" p="sm" className="!bg-[#1C2333] border-dashed border-[#3b4262]">
-                  <List spacing="xs" size="sm" icon={<ThemeIcon color="indigo" size={16} radius="xl" variant="filled"><Zap size={10} /></ThemeIcon>}>
-                    <List.Item className="text-gray-300">AI가 사실관계를 JSON 구조화하여 정리</List.Item>
-                    <List.Item className="text-gray-300">"정리된 사건 개요" 및 타임라인 자동 생성</List.Item>
-                    <List.Item icon={<ThemeIcon color="green" size={16} radius="xl" variant="filled"><ShieldCheck size={10} /></ThemeIcon>} className="text-gray-300">
-                      사무실 단일 CRM으로 전달 (변호사법 준수)
-                    </List.Item>
-                  </List>
-                </Card>
-              </Stack>
-            </Card>
-          </SimpleGrid>
-
-          {/* Advantages Section */}
-          <Card padding={64} radius="xl" className="bg-gradient-to-br from-slate-900 to-slate-800 text-white overflow-hidden relative">
-            <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10" />
-            <Stack align="center" gap="xl" mb={64} className="text-center relative z-10">
-              <Title order={3} className="text-3xl md:text-4xl font-bold break-keep text-white">
-                AI가 신뢰를 만들고,
-                <br />
-                변호사는 정리된 사건만 보면 됩니다
-              </Title>
-            </Stack>
-
-            <SimpleGrid cols={{ base: 1, md: 3 }} spacing="xl" className="relative z-10">
-              <Card padding="xl" radius="md" className="!bg-[#151932] border-[#3b4262] hover:border-blue-500 transition-all duration-300" withBorder>
-                <Stack gap="md">
-                  <Group>
-                    <ThemeIcon color="red" variant="light" size="xl" radius="md" className="bg-red-900/30 text-red-200">
-                      <TrendingUp size={24} />
-                    </ThemeIcon>
-                    <Text fw={700} size="lg" c="white">압도적 전환율</Text>
-                  </Group>
-                  <Text size="sm" c="dimmed" className="text-gray-300">
-                    같은 광고비로도 상담 전환율 3~10배까지 노려볼 수 있는 구조
-                  </Text>
-                </Stack>
-              </Card>
-              <Card padding="xl" radius="md" className="!bg-[#151932] border-[#3b4262] hover:border-blue-500 transition-all duration-300" withBorder>
-                <Stack gap="md">
-                  <Group>
-                    <ThemeIcon color="blue" variant="light" size="xl" radius="md" className="bg-blue-900/30 text-blue-200">
-                      <Target size={24} />
-                    </ThemeIcon>
-                    <Text fw={700} size="lg" c="white">AI 초진 처리</Text>
-                  </Group>
-                  <Text size="sm" c="dimmed" className="text-gray-300">
-                    초진·기초 질문은 AI가 처리하고, 의뢰인의 정보를 체계적으로 정리합니다.
-                  </Text>
-                </Stack>
-              </Card>
-              <Card padding="xl" radius="md" className="!bg-[#151932] border-[#3b4262] hover:border-blue-500 transition-all duration-300" withBorder>
-                <Stack gap="md">
-                  <Group>
-                    <ThemeIcon color="yellow" variant="light" size="xl" radius="md" className="bg-yellow-900/30 text-yellow-200">
-                      <Zap size={24} />
-                    </ThemeIcon>
-                    <Text fw={700} size="lg" c="white">핵심 업무 집중</Text>
-                  </Group>
-                  <Text size="sm" c="dimmed" className="text-gray-300">
-                    변호사는 판단·전략·협상 등 본질적인 고부가가치 업무에만 집중할 수 있습니다.
-                  </Text>
-                </Stack>
-              </Card>
-            </SimpleGrid>
-          </Card>
-        </Container>
-      </section>
-
-      {/* Necessity Section */}
-      <section className="py-24 bg-transparent border-t border-gray-800">
-        <Container size="xl">
-          <Stack align="center" gap="xl" mb={64} className="text-center">
-            <Title order={2} className="text-3xl md:text-4xl font-bold break-keep">
-              “AI와 먼저 대화한 의뢰인”을
-              <br />
-              잡는 로펌과 놓치는 로펌
-            </Title>
-            <Stack gap="xs">
-              <Text size="xl" c="dimmed" className="break-keep">
-                이미 의뢰인의 머릿속 흐름은
-                <br />
-                <Text span fw={700} c="blue">검색 → AI 상담 → 변호사 선택</Text>으로 바뀌었습니다.
-              </Text>
-              <Text size="xl" c="dimmed" className="break-keep">
-                지금 우리 로펌 전용 AI를 갖추지 않으면,
-                <br />
-                고가치 사건의 첫 대화는 영원히 남의 시스템에서 시작됩니다.
-              </Text>
-            </Stack>
-          </Stack>
-
-          <Stack gap="lg" maw={1024} mx="auto">
-            <Card padding="lg" radius="md" withBorder className="!bg-[#151932] border-[#3b4262] hover:border-blue-400 transition-colors duration-300">
-              <Group align="start" wrap="nowrap">
-                <ThemeIcon size={48} radius="md" color="blue" variant="light" className="shrink-0 bg-blue-900/30">
-                  <Users className="w-6 h-6 text-blue-200" />
-                </ThemeIcon>
-                <div>
-                  <Text size="sm" fw={700} c="blue.2" mb={4}>PROBLEM 01</Text>
-                  <Title order={4} size="h3" mb="xs" fw={700} c="white">사건의 90%는 "기초 정보 파악"에서 이탈합니다</Title>
-                  <Text c="dimmed" size="md" lh={1.6} className="text-gray-300">
-                    의뢰인은 자신의 문제를 명확히 설명하지 못해 상담 전 이탈합니다. 라이트 AI가 이를 대신 정리해주면 상담 준비도가 폭발적으로 증가합니다.
-                  </Text>
-                </div>
-              </Group>
-            </Card>
-
-            <Card padding="lg" radius="md" withBorder className="!bg-[#151932] border-[#3b4262] hover:border-green-400 transition-colors duration-300">
-              <Group align="start" wrap="nowrap">
-                <ThemeIcon size={48} radius="md" color="green" variant="light" className="shrink-0 bg-green-900/30">
-                  <Clock className="w-6 h-6 text-green-200" />
-                </ThemeIcon>
-                <div>
-                  <Text size="sm" fw={700} c="green.2" mb={4}>PROBLEM 02</Text>
-                  <Title order={4} size="h3" mb="xs" fw={700} c="white">변호사의 시간과 리소스는 제한적입니다</Title>
-                  <Text c="dimmed" size="md" lh={1.6} className="text-gray-300">
-                    초동 상담에 뺏기는 시간을 자동화하여, 변호사님은 사건 판단과 전략 수립이라는 본질적인 업무에 집중할 수 있습니다.
-                  </Text>
-                </div>
-              </Group>
-            </Card>
-
-            <Card padding="lg" radius="md" withBorder className="!bg-[#151932] border-[#3b4262] hover:border-purple-400 transition-colors duration-300">
-              <Group align="start" wrap="nowrap">
-                <ThemeIcon size={48} radius="md" color="purple" variant="light" className="shrink-0 bg-purple-900/30">
-                  <TrendingUp className="w-6 h-6 text-purple-200" />
-                </ThemeIcon>
-                <div>
-                  <Text size="sm" fw={700} c="purple.2" mb={4}>OPPORTUNITY</Text>
-                  <Title order={4} size="h3" mb="xs" fw={700} c="white">경쟁 로펌 대비 압도적 디지털 전환</Title>
-                  <Text c="dimmed" size="md" lh={1.6} className="text-gray-300">
-                    단순 블로그 경쟁을 넘어, AI 기반 구조화 시스템을 선점함으로써 광고 경쟁력이 6개월~1년 단위로 벌어지게 됩니다.
-                  </Text>
-                </div>
-              </Group>
-            </Card>
-          </Stack>
-        </Container>
-      </section>
-
-      {/* Webtoon Section */}
-      <section className="py-24 md:py-32 bg-transparent">
-        <Container size="xl">
-          <Stack align="center" gap="xl" mb={48} className="text-center">
-            <Title order={2} className="text-3xl md:text-4xl font-bold" c="white">기존 법률 광고는 끝났습니다</Title>
-            <Text size="lg" c="dimmed">AI 이중퍼널 시스템으로 변화하는 법률 시장의 미래</Text>
-          </Stack>
-
-          <Card radius="xl" shadow="xl" withBorder padding={0} style={{ overflow: 'hidden' }}>
-            <Image
-              src="/images/legal-marketing-webtoon.png"
-              alt="AI 이중퍼널 시스템 웹툰"
-              w="100%"
-            />
-          </Card>
-        </Container>
-      </section>
-
-      {/* YouTube Video Section */}
-      <section className="py-16 md:py-20 bg-transparent">
-        <Container size="lg">
-          <Stack align="center" gap="xl" mb={32} className="text-center">
-            <Title order={2} className="text-3xl md:text-4xl font-bold" c="white">솔루션 소개 영상</Title>
-            <Text size="lg" c="dimmed">LLM 기반 이중퍼널 시스템을 영상으로 확인하세요</Text>
-          </Stack>
-
-          <div className="relative bg-[#111] rounded-xl overflow-hidden shadow-2xl border border-gray-800 max-w-4xl mx-auto">
-            {/* Top Film Strip Perforations */}
-            <div className="h-6 w-full bg-[#000] border-b border-gray-800 flex items-center">
-              <div className="w-full h-3 opacity-30" style={{
-                backgroundImage: 'linear-gradient(to right, transparent 50%, #ffffff 50%)',
-                backgroundSize: '24px 100%'
-              }} />
+              </p>
             </div>
 
-            {/* Video Area */}
-            <div className="bg-black">
-              <Card radius="none" shadow="none" padding={0} bg="black" style={{ overflow: 'hidden' }}>
-                <AspectRatio ratio={16 / 9}>
-                  <iframe
-                    src="https://www.youtube.com/embed/hpS7vVrgSkE"
-                    title="LLM 기반 이중퍼널 병원 마케팅 솔루션"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                    style={{ border: 0 }}
-                  />
-                </AspectRatio>
-              </Card>
-            </div>
+            {/* Hero Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
+              <GlassCard className="p-6 text-left">
+                <div className="icon-glass w-12 h-12 flex items-center justify-center mb-4">
+                  <TrendingUp className="w-6 h-6 text-blue-400" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">변화된 사용자 행동</h3>
+                <p className="text-sm text-gray-400 break-keep">
+                  검색 → AI 대화 → 변호사 선택
+                  <br />
+                  이미 사용자 행동은 이렇게 바뀌었습니다.
+                </p>
+              </GlassCard>
 
-            {/* Bottom Film Strip Perforations */}
-            <div className="h-6 w-full bg-[#000] border-t border-gray-800 flex items-center">
-              <div className="w-full h-3 opacity-30" style={{
-                backgroundImage: 'linear-gradient(to right, transparent 50%, #ffffff 50%)',
-                backgroundSize: '24px 100%'
-              }} />
+              <GlassCard className="p-6 text-left">
+                <div className="icon-glass w-12 h-12 flex items-center justify-center mb-4">
+                  <Target className="w-6 h-6 text-blue-400" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">로펌 전용 AI의 역할</h3>
+                <p className="text-sm text-gray-400 break-keep">
+                  AI가 의뢰인의 말을 듣고, 정보를 정리하고, 신뢰를 만듭니다.
+                </p>
+              </GlassCard>
+
+              <GlassCard className="p-6 text-left">
+                <div className="icon-glass w-12 h-12 flex items-center justify-center mb-4">
+                  <Zap className="w-6 h-6 text-blue-400" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">AI 법률 2중 퍼널</h3>
+                <p className="text-sm text-gray-400 break-keep">
+                  익명 상담 AI로 유입을 모으고, 사건정리 AI로 상담까지 연결합니다.
+                </p>
+              </GlassCard>
             </div>
           </div>
-        </Container>
-      </section>
+        </section>
 
-      {/* 상담 신청 폼 */}
-      <section id="consultation-form" className="py-16 md:py-20">
-        <Container size="xl">
-          <Stack align="center" gap="xl" mb={48} className="text-center">
-            <Title order={2} className="text-3xl md:text-4xl font-bold" c="white">무료 컨설팅 및 데모 신청하기</Title>
-            <Text size="lg" c="dimmed">빠르게 연락드리고 상담을 해드리도록 하겠습니다</Text>
-          </Stack>
+        {/* Section 1: 변화된 시장 환경 */}
+        <section className="py-20 md:py-32 px-4">
+          <div className="max-w-6xl mx-auto">
+            <SectionTitle
+              badge="MARKET CHANGE"
+              title="의뢰인이 변호사를 찾는 방법이"
+              highlight="완전히 바뀌었습니다"
+            />
 
-          <ConsultationForm />
-        </Container>
-      </section>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              <GlassCard className="p-8 text-center">
+                <div className="icon-glass w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                  <Search className="w-8 h-8 text-gray-400" />
+                </div>
+                <span className="text-sm text-blue-400 font-medium">초기</span>
+                <h3 className="text-xl font-bold text-white mt-2 mb-4">검색 광고</h3>
+                <p className="text-sm text-gray-400 break-keep">
+                  키워드 광고 경쟁은 심해지고, 비용은 계속 오릅니다. 광고만으로는 신뢰를 얻기 어렵습니다.
+                </p>
+              </GlassCard>
 
-      {/* Footer */}
-      <footer className="border-t border-gray-800 bg-[#0B0D14] py-12">
-        <Container size="lg">
-          <Stack gap="lg" align="center">
-            <Card withBorder radius="md" p="md" bg="orange.0" className="border-orange-200">
-              <Group gap="xs">
-                <AlertCircle className="w-5 h-5 text-orange-600" />
-                <Text size="sm" c="orange.9">본 서비스는 법률 자문이 아니며, 구체적인 법률 판단은 변호사 상담이 필수입니다.</Text>
-              </Group>
-            </Card>
+              <GlassCard className="p-8 text-center relative">
+                <div className="absolute top-1/2 left-0 w-full flex justify-between px-4 -translate-y-1/2 pointer-events-none hidden md:flex">
+                  <ArrowRight className="w-6 h-6 text-blue-500/50 -ml-10" />
+                  <ArrowRight className="w-6 h-6 text-blue-500/50 -mr-10" />
+                </div>
+                <div className="icon-glass w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                  <FileText className="w-8 h-8 text-gray-400" />
+                </div>
+                <span className="text-sm text-blue-400 font-medium">과거</span>
+                <h3 className="text-xl font-bold text-white mt-2 mb-4">블로그</h3>
+                <p className="text-sm text-gray-400 break-keep">
+                  네이버 검색 방식이 계속 바뀌면서, 블로그 글이 잘 보일지 예측하기가 불가능해졌습니다.
+                </p>
+              </GlassCard>
 
-            <Stack gap="xs" align="center" className="text-center">
-              <Text fw={600} size="lg">주식회사 루미브리즈</Text>
-              <Text size="sm" c="dimmed">대표 유범석</Text>
-              <Group gap="md">
-                <Text component="a" href="mailto:lumibreeze00@gmail.com" size="sm" c="blue" td="underline">
-                  ✉ lumibreeze00@gmail.com
-                </Text>
-                <Text component="a" href="tel:010-8761-4598" size="sm" c="blue" td="underline">
-                  📞 010-8761-4598
-                </Text>
-              </Group>
-            </Stack>
-          </Stack>
-        </Container>
-      </footer>
-    </main >
+              <GlassCard variant="highlight" className="p-8 text-center">
+                <div className="icon-glass w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                  <Bot className="w-8 h-8 text-blue-400" />
+                </div>
+                <span className="text-sm text-cyan-400 font-medium">현재</span>
+                <h3 className="text-xl font-bold text-white mt-2 mb-4">AI에게 질문</h3>
+                <p className="text-sm text-gray-300 break-keep">
+                  사람들은 이제 '이런 일로 소송할 수 있나요?' 같은 질문을 변호사보다 AI에게 먼저 물어봅니다.
+                </p>
+              </GlassCard>
+            </div>
+
+            <GlassCard variant="highlight" className="p-6 md:p-8 text-center max-w-4xl mx-auto">
+              <p className="text-lg md:text-xl font-medium text-white break-keep">
+                이제 고객이 있는 곳, 즉 <span className="text-gradient">'AI 대화'</span> 안으로 들어가야 합니다.
+              </p>
+            </GlassCard>
+          </div>
+        </section>
+
+        {/* Section 2: 법무법인의 4가지 어려움 */}
+        <section className="py-20 md:py-32 px-4">
+          <div className="max-w-6xl mx-auto">
+            <SectionTitle
+              badge="CHALLENGES"
+              title="그래서 지금, 법무법인은"
+              highlight="4가지 어려움을 겪고 있습니다"
+            />
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <GlassCard className="p-8">
+                <div className="flex items-start gap-4">
+                  <div className="icon-glass w-14 h-14 flex items-center justify-center shrink-0">
+                    <TrendingUp className="w-7 h-7 text-red-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-3">광고비 부담</h3>
+                    <p className="text-gray-400 break-keep leading-relaxed">
+                      법률 마케팅 비용은 4년 새 127%나 올랐지만, 어떤 광고가 실제 수임으로 이어지는지 알기 어렵습니다.
+                    </p>
+                  </div>
+                </div>
+              </GlassCard>
+
+              <GlassCard className="p-8">
+                <div className="flex items-start gap-4">
+                  <div className="icon-glass w-14 h-14 flex items-center justify-center shrink-0">
+                    <MessageCircle className="w-7 h-7 text-orange-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-3">끝없는 초기 상담</h3>
+                    <p className="text-gray-400 break-keep leading-relaxed">
+                      문의 내용은 제각각인데, 사실관계를 파악하는 데에만 변호사님과 실무진의 시간이 너무 많이 쓰입니다.
+                    </p>
+                  </div>
+                </div>
+              </GlassCard>
+
+              <GlassCard className="p-8">
+                <div className="flex items-start gap-4">
+                  <div className="icon-glass w-14 h-14 flex items-center justify-center shrink-0">
+                    <Scale className="w-7 h-7 text-yellow-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-3">어떤 사건에 집중할까?</h3>
+                    <p className="text-gray-400 break-keep leading-relaxed">
+                      사건의 중요도, 시급성, 증거 유무를 미리 알기 어려워 어떤 상담에 먼저 집중해야 할지 판단하기 힘듭니다.
+                    </p>
+                  </div>
+                </div>
+              </GlassCard>
+
+              <GlassCard className="p-8">
+                <div className="flex items-start gap-4">
+                  <div className="icon-glass w-14 h-14 flex items-center justify-center shrink-0">
+                    <FileText className="w-7 h-7 text-purple-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-3">예측 안 되는 블로그</h3>
+                    <p className="text-gray-400 break-keep leading-relaxed">
+                      큰 비용을 들여 블로그를 운영해도, 검색 결과에서 언제 사라질지 몰라 불안정합니다.
+                    </p>
+                  </div>
+                </div>
+              </GlassCard>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 3: 블로그가 정답이 아닌 이유 */}
+        <section className="py-20 md:py-32 px-4">
+          <div className="max-w-6xl mx-auto">
+            <SectionTitle
+              badge="INSIGHT"
+              title="더 이상 '블로그'가"
+              highlight="정답이 아닌 이유"
+            />
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+              <GlassCard className="p-8">
+                <span className="text-sm text-gray-500 font-medium">과거</span>
+                <h3 className="text-2xl font-bold text-white mt-2 mb-4">키워드 기반 상위노출</h3>
+                <p className="text-gray-400 break-keep leading-relaxed">
+                  과거에는 키워드만 잘 맞추면 통하는 '상위노출 공식'이 있었습니다.
+                </p>
+              </GlassCard>
+
+              <GlassCard variant="highlight" className="p-8">
+                <span className="text-sm text-blue-400 font-medium">현재</span>
+                <h3 className="text-2xl font-bold text-white mt-2 mb-4">AI 기반 평가 시스템</h3>
+                <p className="text-gray-300 break-keep leading-relaxed">
+                  하지만, 이제 네이버와 구글의 평가 기준이 <span className="text-blue-400 font-semibold">AI 기반으로 완전히 바뀌</span>어 과거의 방식은 통하지 않을 뿐만 아니라, <span className="text-red-400 font-semibold">오히려 위험합니다.</span>
+                </p>
+              </GlassCard>
+            </div>
+
+            <GlassCard className="p-8 text-center max-w-4xl mx-auto">
+              <p className="text-lg text-gray-300 mb-4 break-keep">
+                역설적으로, 블로그를 살리려면
+                <br />
+                <span className="text-white font-semibold">블로그 밖의 자산이 필수</span>가 되었습니다.
+              </p>
+              <p className="text-gray-400 break-keep">
+                자사 웹사이트의 품질과 신뢰 설계가 블로그 노출의 전제 조건이 되는 시대입니다.
+              </p>
+            </GlassCard>
+          </div>
+        </section>
+
+        {/* Section 4: 루미브리즈의 해결책 */}
+        <section className="py-20 md:py-32 px-4">
+          <div className="max-w-6xl mx-auto">
+            <SectionTitle
+              badge="SOLUTION"
+              title="루미브리즈의 제안:"
+              highlight="'2단계 AI 해결책'"
+            />
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+              <GlassCard variant="feature" className="p-8 text-center">
+                <div className="w-16 h-16 rounded-full bg-blue-500/20 flex items-center justify-center mx-auto mb-6 border-2 border-blue-500/30">
+                  <span className="text-2xl font-bold text-blue-400">1</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">법률 정보 AI</h3>
+                <p className="text-sm text-blue-400 mb-4">웹사이트 방문객을 위한</p>
+                <p className="text-gray-400 text-sm break-keep">
+                  법률 정보에 대한 궁금증을 풀어주고, 자연스럽게 다음 단계로 안내합니다.
+                </p>
+              </GlassCard>
+
+              <div className="flex items-center justify-center">
+                <ArrowRight className="w-10 h-10 text-blue-500/50 rotate-90 md:rotate-0" />
+              </div>
+
+              <GlassCard variant="feature" className="p-8 text-center">
+                <div className="w-16 h-16 rounded-full bg-indigo-500/20 flex items-center justify-center mx-auto mb-6 border-2 border-indigo-500/30">
+                  <span className="text-2xl font-bold text-indigo-400">2</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">사건 정리 AI</h3>
+                <p className="text-sm text-indigo-400 mb-4">변호사님을 위한</p>
+                <p className="text-gray-400 text-sm break-keep">
+                  상담 전, 사건의 핵심을 미리 파악하고 정리해주는 똑똑한 비서 역할을 합니다.
+                </p>
+              </GlassCard>
+            </div>
+
+            <GlassCard variant="highlight" className="p-8 text-center max-w-4xl mx-auto animate-pulse-glow">
+              <div className="flex items-center justify-center gap-4 mb-4">
+                <Users className="w-8 h-8 text-cyan-400" />
+                <ArrowRight className="w-6 h-6 text-gray-500" />
+                <Briefcase className="w-8 h-8 text-cyan-400" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-2">좋은 의뢰인과 준비된 상담</h3>
+              <p className="text-gray-300 break-keep">
+                변호사법을 철저히 지키면서, 더 많은 의뢰인을 만나는 가장 안전한 방법입니다.
+              </p>
+            </GlassCard>
+          </div>
+        </section>
+
+        {/* Section 5: 변호사법 준수 원칙 */}
+        <section className="py-20 md:py-32 px-4">
+          <div className="max-w-6xl mx-auto">
+            <SectionTitle
+              badge="COMPLIANCE"
+              title="가장 중요한 원칙:"
+              highlight="변호사법을 철저히 준수합니다"
+              subtitle="저희 AI는 법률 서비스를 제공하는 'AI 변호사'가 아닙니다. 변호사님의 업무를 돕는 '보조 도구'입니다."
+            />
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <GlassCard className="p-8">
+                <div className="flex items-center gap-3 mb-6">
+                  <CheckCircle className="w-8 h-8 text-green-400" />
+                  <h3 className="text-xl font-bold text-white">AI가 하는 일</h3>
+                </div>
+                <ul className="space-y-4">
+                  {[
+                    "일반 법률 정보 및 절차 안내",
+                    "방문객의 상황이 어떤 법률 분야에 해당하는지 분류",
+                    "상담 전 준비해야 할 자료나 질문 목록 제공",
+                    "변호사님을 위해 상담 내용을 미리 요약 및 정리",
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-green-400 shrink-0 mt-0.5" />
+                      <span className="text-gray-300 break-keep">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </GlassCard>
+
+              <GlassCard className="p-8">
+                <div className="flex items-center gap-3 mb-6">
+                  <XCircle className="w-8 h-8 text-red-400" />
+                  <h3 className="text-xl font-bold text-white">AI가 절대 하지 않는 일</h3>
+                </div>
+                <ul className="space-y-4">
+                  {[
+                    "'소송하면 이깁니다'와 같은 승패 예측",
+                    "'합의금은 OOO원이 적절합니다' 같은 구체적인 금액 조언",
+                    "변호사의 검토 없이 소장, 계약서 등 법률 문서를 자동으로 만들어 제공",
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <XCircle className="w-5 h-5 text-red-400 shrink-0 mt-0.5" />
+                      <span className="text-gray-300 break-keep">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </GlassCard>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 6: AI 작동 플로우 */}
+        <section className="py-20 md:py-32 px-4">
+          <div className="max-w-6xl mx-auto">
+            <SectionTitle
+              badge="HOW IT WORKS"
+              title="2단계 AI는"
+              highlight="이렇게 작동합니다"
+            />
+
+            <div className="space-y-6">
+              {[
+                {
+                  step: 1,
+                  icon: Bot,
+                  title: "방문객이 웹사이트에서 '법률 정보 AI'를 만납니다",
+                  description: "방문객은 로그인을 하지 않은 상태에서 궁금한 점을 질문합니다. AI는 일반적인 법률 정보와 절차를 안내합니다.",
+                  example: "(예: '전세금 반환 절차는 어떻게 되나요?')",
+                  color: "blue",
+                },
+                {
+                  step: 2,
+                  icon: MessageCircle,
+                  title: "방문객이 상담을 위해 정보를 입력합니다",
+                  description: "방문객이 상담을 원하면, AI가 사건의 기본적인 사실관계를 체계적으로 질문하고 정리합니다.",
+                  highlight: "더 자세한 내용은 변호사님과 상담이 필요합니다.",
+                  color: "indigo",
+                },
+                {
+                  step: 3,
+                  icon: FileCheck,
+                  title: "변호사님은 '사건 정리 AI'로 요약된 보고서를 받습니다",
+                  description: "변호사님은 상담 전에 사건의 핵심 쟁점, 증거 목록 등이 담긴 요약 보고서를 확인합니다. AI는 관련 판례나 법령을 찾아주는 보조 역할도 수행합니다.",
+                  highlight: "변호사님께 전달",
+                  color: "purple",
+                },
+                {
+                  step: 4,
+                  icon: Users,
+                  title: "준비된 상태에서 의뢰인과 상담합니다",
+                  description: "핵심을 미리 파악했기 때문에 훨씬 깊이 있고 효율적인 상담이 가능해집니다.",
+                  color: "cyan",
+                },
+              ].map((item, index) => (
+                <GlassCard key={index} className="p-6 md:p-8">
+                  <div className="flex flex-col md:flex-row items-start gap-6">
+                    <div className={`w-16 h-16 rounded-2xl bg-${item.color}-500/20 flex items-center justify-center shrink-0 border border-${item.color}-500/30`}>
+                      <item.icon className={`w-8 h-8 text-${item.color}-400`} />
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex items-center gap-3 mb-3">
+                        <span className={`text-sm font-bold text-${item.color}-400`}>STEP {item.step}</span>
+                        {item.highlight && (
+                          <span className="text-xs px-3 py-1 bg-green-500/20 text-green-400 rounded-full border border-green-500/30">
+                            {item.highlight}
+                          </span>
+                        )}
+                      </div>
+                      <h3 className="text-xl font-bold text-white mb-3 break-keep">{item.title}</h3>
+                      <p className="text-gray-400 break-keep leading-relaxed">{item.description}</p>
+                      {item.example && (
+                        <p className="text-gray-500 text-sm mt-2">{item.example}</p>
+                      )}
+                    </div>
+                  </div>
+                </GlassCard>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Section 7: 1단계 상세 기능 */}
+        <section className="py-20 md:py-32 px-4">
+          <div className="max-w-6xl mx-auto">
+            <SectionTitle
+              badge="STEP 1"
+              title="1단계: '법률 정보 AI'가"
+              highlight="좋은 의뢰인을 알아서 모아줍니다"
+              subtitle="법률 정보 검색으로 들어온 잠재 고객을 놓치지 않고 상담까지 연결합니다."
+            />
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <GlassCard className="p-8 text-center">
+                <div className="icon-glass w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                  <Clock className="w-10 h-10 text-blue-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">24시간 첫 응대</h3>
+                <p className="text-gray-400 break-keep leading-relaxed">
+                  밤이나 주말에도 잠재 의뢰인의 첫 질문에 즉시 답하며, 문의를 놓치지 않습니다.
+                </p>
+              </GlassCard>
+
+              <GlassCard className="p-8 text-center">
+                <div className="icon-glass w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                  <MessageCircle className="w-10 h-10 text-green-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">자연스러운 상담 유도</h3>
+                <p className="text-gray-400 break-keep leading-relaxed">
+                  방문객의 궁금증을 해결해주면서 '더 자세한 내용은 전문가인 변호사님과 직접 이야기해보세요'라며 자연스럽게 상담을 권합니다.
+                </p>
+              </GlassCard>
+
+              <GlassCard className="p-8 text-center">
+                <div className="icon-glass w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                  <Shield className="w-10 h-10 text-cyan-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">안전한 정보 제공</h3>
+                <p className="text-gray-400 break-keep leading-relaxed">
+                  법적 조언이 아닌, 공개된 법령과 판례에 기반한 일반 정보만 제공합니다. 모든 답변 하단에는 '이 내용은 법률 자문이 아니며, 변호사와 상담이 필요합니다'라는 안내 문구가 항상 표시됩니다.
+                </p>
+              </GlassCard>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 8: 2단계 상세 기능 */}
+        <section className="py-20 md:py-32 px-4">
+          <div className="max-w-6xl mx-auto">
+            <SectionTitle
+              badge="STEP 2"
+              title="2단계: '사건 정리 AI'는"
+              highlight="변호사님의 똑똑한 비서입니다"
+              subtitle="상담 전, 모든 준비를 끝내 변호사님의 시간을 아껴드립니다."
+            />
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <GlassCard className="p-8 text-center">
+                <div className="icon-glass w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                  <FileCheck className="w-10 h-10 text-blue-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">상담 전 요약 보고서</h3>
+                <p className="text-gray-400 break-keep leading-relaxed">
+                  상담 30분을 사건 파악에 쓰는 대신, AI가 미리 정리한 요약본으로 핵심부터 바로 이야기할 수 있습니다.
+                </p>
+              </GlassCard>
+
+              <GlassCard className="p-8 text-center">
+                <div className="icon-glass w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                  <Filter className="w-10 h-10 text-indigo-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">사건 중요도 자동 분류</h3>
+                <p className="text-gray-400 break-keep leading-relaxed">
+                  입력된 정보를 바탕으로 사건의 예상 가치, 시급성 등을 분석해 '긴급/중요/일반'으로 분류해줍니다. 변호사님은 중요한 사건에 먼저 집중할 수 있습니다.
+                </p>
+              </GlassCard>
+
+              <GlassCard className="p-8 text-center">
+                <div className="icon-glass w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                  <Lightbulb className="w-10 h-10 text-yellow-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">초안 문서 및 자료 준비</h3>
+                <p className="text-gray-400 break-keep leading-relaxed">
+                  변호사님의 지시에 따라 관련 판례를 찾고, 소장이나 답변서의 초안을 작성하여 업무 시간을 획기적으로 줄여줍니다. (최종 검토와 수정은 변호사님이 직접 합니다.)
+                </p>
+              </GlassCard>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 9: 기대 효과 1 */}
+        <section className="py-20 md:py-32 px-4">
+          <div className="max-w-6xl mx-auto">
+            <SectionTitle
+              badge="BENEFITS 1"
+              title="기대 효과 1: 마케팅 비용은 줄고,"
+              highlight="좋은 의뢰인은 늘어납니다"
+            />
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <GlassCard className="p-8 text-center">
+                <div className="icon-glass w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                  <Target className="w-10 h-10 text-red-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">광고 효과 극대화</h3>
+                <p className="text-gray-400 break-keep leading-relaxed">
+                  어떤 광고를 통해 들어온 문의가 실제 수임까지 이어졌는지 데이터로 명확하게 보여줍니다. 효과 없는 광고를 줄이고, 효과 있는 곳에 집중할 수 있습니다.
+                </p>
+              </GlassCard>
+
+              <GlassCard className="p-8 text-center">
+                <div className="icon-glass w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                  <Gem className="w-10 h-10 text-cyan-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">수임 가능성 높은 의뢰인 선별</h3>
+                <p className="text-gray-400 break-keep leading-relaxed">
+                  AI가 1차로 사건을 분류해주기 때문에, 수임 가능성이 높은 '진짜 고객'에게 변호사님의 소중한 시간을 집중할 수 있습니다.
+                </p>
+              </GlassCard>
+
+              <GlassCard className="p-8 text-center">
+                <div className="icon-glass w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                  <Sparkles className="w-10 h-10 text-purple-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">웹사이트를 떠나지 않는 고객</h3>
+                <p className="text-gray-400 break-keep leading-relaxed">
+                  방문객이 필요한 정보를 얻고 다음 단계(상담)까지 한 곳에서 해결할 수 있어, 다른 곳으로 이탈하지 않고 우리 법무법인의 고객이 될 확률이 높아집니다.
+                </p>
+              </GlassCard>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 10: 기대 효과 2 */}
+        <section className="py-20 md:py-32 px-4">
+          <div className="max-w-6xl mx-auto">
+            <SectionTitle
+              badge="BENEFITS 2"
+              title="기대 효과 2: 반복 업무가 줄고,"
+              highlight="변호사님은 중요한 일에 집중합니다"
+            />
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <GlassCard className="p-8 text-center">
+                <div className="icon-glass w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                  <Timer className="w-10 h-10 text-amber-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">변호사 시간 절약</h3>
+                <p className="text-gray-400 break-keep leading-relaxed">
+                  사실관계 파악, 사건 요약, 기초 자료 검색 등 AI가 미리 처리해, 변호사님은 법리 검토와 같이 가장 중요한 핵심 업무에만 집중할 수 있습니다.
+                </p>
+              </GlassCard>
+
+              <GlassCard className="p-8 text-center">
+                <div className="icon-glass w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                  <FolderOpen className="w-10 h-10 text-blue-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">체계적인 상담 기록</h3>
+                <p className="text-gray-400 break-keep leading-relaxed">
+                  모든 초기 상담 내용이 동일한 형식으로 정리되고 저장되어, 나중에 찾아보거나 다른 변호사와 협업하기가 매우 편리해집니다.
+                </p>
+              </GlassCard>
+
+              <GlassCard className="p-8 text-center">
+                <div className="icon-glass w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                  <CalendarCheck className="w-10 h-10 text-green-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">'노쇼' 감소</h3>
+                <p className="text-gray-400 break-keep leading-relaxed">
+                  AI와 대화하며 상담을 예약한 고객은 자신의 사건에 더 진지하게 임하게 되어, 예약 후 나타나지 않는 '노쇼' 비율이 눈에 띄게 줄어듭니다.
+                </p>
+              </GlassCard>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 11: 도입 프로세스 (CTA) */}
+        <section className="py-20 md:py-32 px-4">
+          <div className="max-w-4xl mx-auto">
+            <SectionTitle
+              badge="GET STARTED"
+              title="시작은 간단합니다"
+              subtitle="다음 단계를 위해 함께 논의할 내용을 제안합니다."
+            />
+
+            <GlassCard className="p-8 md:p-12">
+              <div className="space-y-8">
+                {[
+                  {
+                    title: "시험 운영 범위 정하기",
+                    desc: "어떤 종류의 사건을 대상으로 먼저 시작해볼지 결정합니다.",
+                  },
+                  {
+                    title: "중요 사건 기준 설정하기",
+                    desc: "'긴급/중요/일반'을 나누는 우리 법무법인만의 기준을 함께 만듭니다.",
+                  },
+                  {
+                    title: "법률적 안전장치 최종 검토",
+                    desc: "변호사님께서 직접 저희 AI의 안내 문구와 작동 방식을 보시고, 변호사법 준수 여부를 최종 점검합니다.",
+                  },
+                  {
+                    title: "첫 미팅 날짜 정하기",
+                    desc: "위 내용들을 논의하기 위한 첫 미팅 일정을 잡습니다.",
+                  },
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-4">
+                    <div className="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center shrink-0 border border-green-500/30">
+                      <CheckCircle className="w-5 h-5 text-green-400" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-semibold text-white mb-1">{item.title}</h4>
+                      <p className="text-gray-400 break-keep">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-12 text-center">
+                <GlassButton size="xl" onClick={scrollToForm} className="animate-pulse-glow">
+                  무료 컨설팅 신청하기
+                </GlassButton>
+              </div>
+            </GlassCard>
+          </div>
+        </section>
+
+        {/* 상담 신청 폼 */}
+        <section id="consultation-form" className="py-20 md:py-32 px-4">
+          <div className="max-w-4xl mx-auto">
+            <SectionTitle
+              badge="CONTACT"
+              title="무료 컨설팅 및 데모 신청하기"
+              subtitle="빠르게 연락드리고 상담을 해드리도록 하겠습니다"
+            />
+
+            <ConsultationForm />
+          </div>
+        </section>
+
+        {/* Footer */}
+        <footer className="border-t border-white/10 py-16 px-4">
+          <div className="max-w-4xl mx-auto">
+            <GlassCard className="p-6 mb-8">
+              <div className="flex items-start gap-3">
+                <AlertCircle className="w-5 h-5 text-orange-400 shrink-0 mt-0.5" />
+                <p className="text-sm text-orange-300">
+                  본 서비스는 법률 자문이 아니며, 구체적인 법률 판단은 변호사 상담이 필수입니다.
+                </p>
+              </div>
+            </GlassCard>
+
+            <div className="text-center space-y-4">
+              <h3 className="text-xl font-bold text-white">주식회사 루미브리즈</h3>
+              <p className="text-gray-400">대표 유범석</p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="mailto:lumibreeze00@gmail.com" className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors">
+                  <Mail className="w-4 h-4" />
+                  lumibreeze00@gmail.com
+                </a>
+                <a href="tel:010-8761-4598" className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors">
+                  <Phone className="w-4 h-4" />
+                  010-8761-4598
+                </a>
+              </div>
+              <p className="text-sm text-gray-500 mt-8">
+                © 2024 Lumibreeze. All rights reserved.
+              </p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </main>
   )
 }
